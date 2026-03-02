@@ -1,0 +1,86 @@
+---
+title: "How to Send an Invoice via Email in Better PDF Invoice"
+description: "Learn how to send a PDF invoice to a customer by email from the order detail page in the Better PDF Invoice app."
+---
+
+# How to Send an Invoice via Email
+
+Send a PDF invoice directly to a customer's email from the order detail page. You can customize the recipient, choose a template, add BCC recipients, and select the invoice language.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- An order with a valid customer email address
+- At least one invoice template configured
+
+## Steps
+
+### Step 1: Open the Order Detail Page
+
+From the **Orders** page, click on the order number to open the order detail view.
+
+{/* screenshot: Order detail page showing the order header */}
+
+### Step 2: Click Send Invoice
+
+Click **Send invoice** in the order detail page. This opens the send invoice modal dialog.
+
+{/* screenshot: Send invoice button on the order detail page */}
+
+### Step 3: Confirm the Recipient Email
+
+In the **Send to** field, the customer's email address is auto-filled. Edit it if you need to send to a different email address.
+
+{/* screenshot: Send invoice modal with Send to field showing the customer email */}
+
+### Step 4: Add BCC Email Recipients (Optional)
+
+In the **BCC email** field, type an email address and select it from the dropdown to add it as a BCC recipient. You can add multiple BCC emails. Each added email appears as a removable tag below the field.
+
+{/* screenshot: BCC email field with tags showing added email addresses */}
+
+### Step 5: Select an Invoice Template
+
+Use the **Invoice template** dropdown to select which template to use for the email invoice. The dropdown shows all available invoice-type templates. Choose the template that matches your needs.
+
+{/* screenshot: Invoice template dropdown with template options */}
+
+### Step 6: Choose the Invoice Language
+
+Under the language section, choose between two options:
+- **Use billing language** (Ultimate plan required) -- automatically uses the customer's billing language
+- **Custom** -- select a specific language from the dropdown
+
+{/* screenshot: Language choice list with Use billing language and Custom options */}
+
+### Step 7: Select a Custom Language
+
+If you chose **Custom**, use the language dropdown that appears to select from the available languages.
+
+{/* screenshot: Custom language dropdown with language options */}
+
+### Step 8: Send the Invoice
+
+Click the **Send** button in the modal footer to send the invoice. A success toast message confirms the send was successful.
+
+{/* screenshot: Send button in the modal footer */}
+
+### Step 9: Cancel if Needed
+
+Click **Cancel** in the modal footer to close the modal without sending.
+
+{/* screenshot: Cancel button in the modal footer */}
+
+## Tips
+
+- If the order has no customer email, you will need to enter a recipient email manually in the **Send to** field.
+- The "Use billing language" option requires the Ultimate plan. A badge indicates if an upgrade is needed.
+- Validation ensures the email address is valid and the template is selected before allowing the send.
+- For B2B orders with early payment benefits, the invoice will automatically include discount information if the benefit is still active.
+- If the order has been updated, a banner on the order detail page prompts you to resend the invoice.
+
+## Related Articles
+
+- [Bulk Send Invoices](/docs/orders/mass-send)
+- [Order Details](/docs/orders/order-details)
+- [Print an Invoice](/docs/orders/print-order)

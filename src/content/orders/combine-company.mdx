@@ -1,0 +1,100 @@
+---
+title: "How to Combine Company Orders for B2B Invoicing in Better PDF Invoice"
+description: "Learn how to combine B2B company orders into consolidated invoices for wholesale customers in the Better PDF Invoice app."
+---
+
+# How to Combine Company Orders for B2B Invoicing
+
+The B2B Purchases page lets you manage all companies with B2B orders and combine their orders into consolidated invoices. This streamlines invoicing for wholesale and B2B customers who place multiple orders over time.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- Wholesale plan subscription
+- B2B customers with company accounts set up in Shopify
+- At least two qualifying orders from the same company
+
+## Steps
+
+### Step 1: Navigate to B2B Purchases
+
+Click **B2B Purchases** in the app sidebar. The page title reads "B2B Purchases" with the subtitle "Manage all companies with B2B purchase."
+
+{/* screenshot: B2B Purchases page with title and company listing */}
+
+### Step 2: Select a Company
+
+Browse the list of companies that have B2B orders. Click on a company to view all their orders.
+
+{/* screenshot: Company list on the B2B Purchases page */}
+
+### Step 3: Review Company Orders
+
+The company orders page displays all orders from the selected company in a table with columns for order number, date, customer, total, payment status, fulfillment status, items, delivery method, delivery status, tags, and print status.
+
+{/* screenshot: Company orders table showing all orders for a selected company */}
+
+### Step 4: Select Orders to Combine
+
+Check the checkboxes next to the orders you want to combine. You must select at least 2 orders. Verify the selected orders meet the requirements:
+- Not closed or archived
+- Have payment terms
+- Not fully paid
+
+{/* screenshot: Multiple company orders selected with checkboxes */}
+
+### Step 5: Check Combine Eligibility
+
+The **Combine orders** button in the bulk actions shows tooltip warnings if orders cannot be combined:
+- "Select at least 2 orders to combine" -- when fewer than 2 orders are selected
+- "You can combine up to 10 orders at a time" -- when more than 10 are selected
+- "Cannot combine closed orders" -- when a closed order is selected
+- "Cannot combine orders without payment terms" -- when an order lacks payment terms
+- "Cannot combine paid orders" -- when a fully paid order is selected
+
+{/* screenshot: Combine orders button with tooltip warning message */}
+
+### Step 6: Click Combine Orders
+
+Once eligible orders are selected, click **Combine orders** in the bulk actions to navigate to the Combine Orders page.
+
+{/* screenshot: Combine orders button enabled with eligible orders selected */}
+
+### Step 7: Configure the Combined Order
+
+On the Combine Orders page, review the combined fulfillment items, configure payment terms, add shipping, and assign a customer. The page title shows the range of order names (e.g., "#1001_#1005").
+
+{/* screenshot: Combine Orders page with order range title and configuration sections */}
+
+### Step 8: Use the Order Detail Combine Shortcut
+
+Alternatively, from any B2B order detail page, click **Combine orders** in the secondary actions to jump directly to the company's B2B page. This shortcut only appears for orders that have both a company and payment terms.
+
+{/* screenshot: Combine orders shortcut on an individual B2B order detail page */}
+
+### Step 9: Print and Download Combined Orders
+
+After the combined order is created, you can print, download, or send the invoice from the new combined order's detail page, just like any other order.
+
+{/* screenshot: Combined order detail page with print, download, and send options */}
+
+### Step 10: Filter Company Orders
+
+Use the same filter tabs and advanced filters available on the main Orders page to filter the company's orders: **All**, **Opened**, **Archived**, **Cancelled**, **Unpaid**, and **Unfulfilled**. Sort and search capabilities are also available.
+
+{/* screenshot: Filter tabs and search bar on the company orders page */}
+
+## Tips
+
+- The Combine Orders feature requires the Wholesale plan. A "Wholesale" badge appears next to the button if you need to upgrade.
+- After combining, the original orders are canceled by default (configurable in app settings).
+- You can use the **Download historical** secondary action on the company orders page (Wholesale plan) to export historical order data.
+- Payment terms from the original orders are preserved and can be adjusted on the combine page.
+- The combined order inherits the company and customer details from the selected orders.
+
+## Related Articles
+
+- [Combine Orders](/docs/orders/combine-orders)
+- [Order Details](/docs/orders/order-details)
+- [Filter Orders](/docs/orders/filter-orders)
+- [Send Invoice by Email](/docs/orders/send-invoice)

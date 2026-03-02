@@ -1,0 +1,251 @@
+---
+title: "How to Troubleshoot Common Issues in Better PDF Invoice"
+description: "Learn how to resolve the most frequently encountered issues with Better PDF Invoice, including invoice generation, email delivery, templates, logos, and connection errors."
+---
+
+# How to Troubleshoot Common Issues
+
+This guide covers the most common problems merchants encounter when using Better PDF Invoice and how to resolve them.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- Admin access to your Shopify store
+
+## Invoices Not Generating
+
+### Q: Why are my invoices not generating or showing as "Unprintable"?
+
+Orders may display an **Unprintable** status for several reasons:
+
+### Step 1: Check Your Subscription Plan
+
+Some plans limit the number of invoices you can generate. Navigate to the **Subscription** page in the app to verify your current plan and usage. If you have exceeded your plan's limit, upgrade to a higher tier.
+
+{/* screenshot: Subscription page showing plan details and usage */}
+
+### Step 2: Verify the Order Exists in the App
+
+Open the **Orders** page in Better PDF Invoice and search for the order. If the order does not appear, it may not have synced yet. Orders sync automatically from Shopify, but there can be a brief delay after an order is placed.
+
+{/* screenshot: Orders page with search bar */}
+
+### Step 3: Check the Order's Print Status
+
+On the Orders page, look at the **Print status** column. If it shows "Unprintable," the order may be excluded by your plan. Contact support or upgrade your plan.
+
+{/* screenshot: Order row showing Unprintable status */}
+
+---
+
+## Email Delivery Failures
+
+### Q: Why are my invoice emails not being delivered to customers?
+
+### Step 1: Verify the Customer Has an Email Address
+
+Open the order in the app and check if a customer email is associated. Orders without a customer email will show the error: "This order does not have customer's email." Ensure the customer provided an email at checkout.
+
+{/* screenshot: Order detail showing customer email field */}
+
+### Step 2: Check Your Email Automation Settings
+
+Navigate to **Email Automation** in the app sidebar. Verify that email automation is enabled and that your email triggers are configured correctly for the order types you want to send.
+
+{/* screenshot: Email Automation settings page with enabled toggle */}
+
+### Step 3: Review Your Email Template
+
+Ensure your email template has a valid subject line, sender name, and body content. Missing or malformed template fields can prevent emails from being sent.
+
+{/* screenshot: Email template editor with subject and body fields */}
+
+### Step 4: Check Spam and Junk Folders
+
+Ask your customer to check their spam or junk folder. Invoice emails sent from the app may be flagged by email providers. Adding your sender email to the customer's contacts can help.
+
+### Step 5: Verify Your Delivery Method
+
+If you are using a custom delivery method (FTP, SFTP, Google Drive), ensure the connection is active and the credentials are correct. Navigate to **Settings > Delivery Methods** and test the connection.
+
+{/* screenshot: Delivery method list with test connection button */}
+
+---
+
+## Template Not Applying
+
+### Q: Why is my custom template not being used for invoices?
+
+### Step 1: Set the Template as Default
+
+Navigate to the **Templates** page in the app. Open your template and ensure it is set as the **Default for printing**. If another template is set as default, your custom template will not be used automatically.
+
+{/* screenshot: Template settings showing "Default for printing" toggle */}
+
+### Step 2: Verify the Template Type
+
+Templates are categorized by type: **Order** or **Draft Order**. Make sure your template type matches the order type you are printing. An Order-type template will not appear when printing draft orders, and vice versa.
+
+{/* screenshot: Template type selector showing Order and Draft Order options */}
+
+### Step 3: Select the Template Manually
+
+When using the Print action from the order detail page or POS, you can manually select which template(s) to use from the template checklist in the right sidebar. Verify that your desired template is checked.
+
+{/* screenshot: Template checklist on the print preview page */}
+
+---
+
+## Logo Not Showing
+
+### Q: Why is my logo not appearing on the invoice?
+
+### Step 1: Check the Logo File Requirements
+
+The app accepts logo files in **PNG**, **JPG**, **JPEG**, or **SVG** format with a maximum file size of **1 MB**. If your file exceeds these limits, resize or compress it before uploading.
+
+### Step 2: Re-upload the Logo
+
+Navigate to your template editor and re-upload the logo. Click the logo upload area and select a new image file. Wait for the upload to complete and verify the logo appears in the template preview.
+
+{/* screenshot: Logo upload area in the template editor */}
+
+### Step 3: Verify the Logo URL
+
+If the logo was uploaded previously but is no longer showing, the image URL may have expired or been deleted. Re-upload the logo to generate a fresh URL.
+
+### Step 4: Check the Template HTML
+
+If you are using a custom HTML template, verify that the logo image tag references the correct URL. The logo variable in templates should use the dynamic logo field provided by the app.
+
+{/* screenshot: Template HTML editor showing logo variable */}
+
+---
+
+## PDF Formatting Issues
+
+### Q: Why does my PDF invoice look different from the template preview?
+
+### Step 1: Check Browser Compatibility
+
+PDF rendering may vary slightly between browsers. For the most consistent results, use Google Chrome or a Chromium-based browser when previewing and downloading invoices.
+
+### Step 2: Review Custom CSS
+
+If you have added custom CSS to your template, some CSS properties may not be fully supported in PDF generation. Avoid complex CSS features like flexbox or grid in favor of table-based layouts for best results.
+
+### Step 3: Check Image Sizes
+
+Large images in your template can cause layout shifts. Ensure all images in your template have explicit width and height values set to prevent unexpected resizing.
+
+{/* screenshot: Template editor with image sizing controls */}
+
+### Step 4: Preview Before Printing
+
+Always use the Print action (not Download) to preview the PDF before sending it to a printer or customer. The print preview page shows exactly how the PDF will render.
+
+{/* screenshot: Print preview page showing accurate PDF rendering */}
+
+---
+
+## FTP/SFTP Connection Errors
+
+### Q: Why is my FTP or SFTP delivery connection failing?
+
+### Step 1: Verify Connection Credentials
+
+Navigate to **Settings > Delivery Methods** and open your FTP or SFTP delivery configuration. Double-check the **Host**, **Port**, **Username**, and **Password** fields for typos.
+
+{/* screenshot: FTP delivery form with host, port, username, and password fields */}
+
+### Step 2: Test the Connection
+
+Click the **Test connection** button on the delivery method form. If the test fails, review the error message for details. Common issues include incorrect port numbers, firewall restrictions, or expired credentials.
+
+{/* screenshot: Test connection button and result message */}
+
+### Step 3: Check Firewall and Network Settings
+
+Ensure your FTP/SFTP server allows incoming connections from external services. Some servers require IP whitelisting. Contact your hosting provider if you are unsure about firewall rules.
+
+### Step 4: Verify the Upload Path
+
+Ensure the **Upload path** (directory) specified in your delivery settings exists on the server and that the user account has write permissions to that directory.
+
+### Step 5: Try SFTP Instead of FTP
+
+If FTP connections are unreliable, consider switching to SFTP, which uses an encrypted connection and is generally more reliable. Create a new SFTP delivery method with the same server details but using port **22** (the default SFTP port).
+
+{/* screenshot: SFTP delivery form configuration */}
+
+---
+
+## Bulk Operations Timing Out
+
+### Q: Why are my bulk print or download operations timing out?
+
+### Step 1: Reduce the Number of Selected Orders
+
+Bulk operations support up to **30 orders** at a time. If you selected more than 30 orders, reduce your selection. For very large batches, process orders in groups of 20-30.
+
+### Step 2: Simplify Your Template
+
+Complex templates with many images or custom fonts take longer to render. If bulk operations frequently time out, consider simplifying your template by reducing image sizes or removing unnecessary elements.
+
+### Step 3: Use Mass Download Instead of Mass Print
+
+The mass download action generates the PDF in the background and may handle larger batches more efficiently than mass print, which requires a live preview.
+
+### Step 4: Check Your Internet Connection
+
+Slow or unstable internet connections can cause timeouts during bulk operations. Ensure you have a stable connection before processing large batches.
+
+{/* screenshot: Bulk operation progress indicator */}
+
+---
+
+## Language Not Changing
+
+### Q: Why is my invoice language not changing when I select a different language?
+
+### Step 1: Check Your Plan
+
+Language selection requires a **Pro plan** or higher. If you are on the Free plan, the language dropdown will prompt you to upgrade. Navigate to the **Subscription** page to upgrade your plan.
+
+{/* screenshot: Language dropdown showing Pro plan badge */}
+
+### Step 2: Set the Primary Language
+
+Navigate to the app and check your primary language setting. The primary language is used as the default for all invoices unless overridden during printing.
+
+{/* screenshot: Language settings showing primary language selector */}
+
+### Step 3: Select Language During Print
+
+When using the Print action, use the **Choose language** dropdown on the print preview page to select a different language. The PDF preview updates automatically to reflect the new language.
+
+{/* screenshot: Choose language dropdown on print preview page */}
+
+### Step 4: Verify Translation Support
+
+Not all template fields may have translations for every language. Check that your template content uses translatable variables rather than hardcoded text. Custom text added directly to the template will not be translated.
+
+{/* screenshot: Template with translatable variable fields highlighted */}
+
+---
+
+## Tips
+
+- Check the **Subscription** page regularly to monitor your plan usage and limits.
+- Always **test** your delivery connections after making changes to credentials or server settings.
+- Use the **Print preview** to verify your invoice output before sending to customers.
+- Keep your templates simple and avoid overly complex layouts for the most reliable PDF generation.
+- If an issue persists after trying these steps, contact Better PDF Invoice support through the app's help section.
+
+## Related Articles
+
+- [How to Use Order Page Actions](/helpdesk/shopify-extensions/order-page-actions)
+- [How to Create a New Template](/helpdesk/templates/create-template)
+- [How to Set Up FTP Delivery](/helpdesk/delivery-methods/ftp-setup)
+- [How to Set Up SFTP Delivery](/helpdesk/delivery-methods/sftp-setup)
+- [How to Test a Delivery Connection](/helpdesk/delivery-methods/test-connection)

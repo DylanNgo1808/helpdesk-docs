@@ -1,0 +1,80 @@
+---
+title: "How to Create B2B Statements in Better PDF Invoice"
+description: "Learn how to generate and download B2B statement PDFs for company orders in the Better PDF Invoice app."
+---
+
+# How to Create B2B Statements
+
+B2B statements are combined PDF documents that summarize orders for a specific company over a given time period. You can generate statements for all orders, outstanding (unpaid/partial) orders only, or a custom date range.
+
+## Prerequisites
+
+- A Wholesale plan in Better PDF Invoice
+- B2B companies with orders in your Shopify admin
+- B2B access scopes granted to the app
+
+## Steps
+
+### Step 1: Navigate to a Company
+
+From the Better PDF Invoice dashboard, click **B2B** in the sidebar, then click on the company you want to generate a statement for.
+
+{/* screenshot: B2B company list with a company highlighted */}
+
+### Step 2: Open the Statement Modal
+
+On the company detail page, click the **Download statement** button. This opens a modal where you can configure your statement options.
+
+{/* screenshot: Download statement button on the company detail page */}
+
+### Step 3: Choose a Filter Option
+
+In the statement modal, select one of the following filter options:
+- **All orders** - includes all orders from the company in the current date range
+- **Outstanding orders only (unpaid/partial)** - includes only orders that have not been fully paid
+- **Custom** - allows you to specify a custom date range
+
+{/* screenshot: Statement modal with three filter options displayed */}
+
+### Step 4: Set a Custom Date Range (Optional)
+
+If you selected **Custom**, two date picker fields appear:
+- **Start date** - the beginning of the statement period
+- **End date** - the end of the statement period
+
+A warning banner reminds you that statements are limited to a 90-day rolling period. If your selected range exceeds 90 days, an error message will appear and the **Download** button will be disabled.
+
+{/* screenshot: Custom date range fields with 90-day warning banner */}
+
+### Step 5: Download the Statement
+
+Click the **Download** button in the modal. The app generates a PDF statement file and automatically downloads it to your computer. The file is named using the pattern: `statement_[company_name]_[start_date]_[end_date].pdf`.
+
+{/* screenshot: Download button in statement modal */}
+
+### Step 6: Cancel If Needed
+
+If you change your mind, click **Cancel** or close the modal to return to the company detail page without generating a statement.
+
+{/* screenshot: Cancel button in the modal */}
+
+### Step 7: Verify the Download
+
+After the download completes, a success toast notification confirms the statement was generated. Open the downloaded PDF to verify it contains the correct orders and date range.
+
+{/* screenshot: Success toast notification after statement download */}
+
+## Tips
+
+- The **Outstanding orders only** filter is useful for sending payment reminders to B2B customers with unpaid balances.
+- Statements are limited to a 90-day date range. If you need a longer period, generate multiple statements covering different date ranges.
+- The statement PDF includes order details, payment status, and totals for the selected period.
+- If no orders are found in the selected custom date range, a notification will alert you that no orders were found.
+- The custom filter suffix is added to the filename (e.g., `_outstanding`) to help you distinguish between different statement types.
+
+## Related Articles
+
+- [How to View and Manage Company Orders](/helpdesk/b2b/company-orders)
+- [How to Manage B2B Companies](/helpdesk/b2b/company-list)
+- [How to View Company Details and Contacts](/helpdesk/b2b/company-details)
+- [How to Manage Wholesale Orders](/helpdesk/b2b/wholesale-orders)

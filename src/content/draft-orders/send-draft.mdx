@@ -1,0 +1,84 @@
+---
+title: "How to Send a Draft Order Invoice by Email in Better PDF Invoice"
+description: "Learn how to send a draft order invoice or quote to a customer via email in the Better PDF Invoice app."
+---
+
+# How to Send a Draft Order Invoice by Email
+
+You can send a draft order invoice (quote) directly to a customer by email from the draft order detail page. The send modal lets you specify the recipient, choose a template and language, and add BCC recipients.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- A Professional or Ultimate plan
+- A draft order with status other than "Completed"
+- At least one Draft Order template configured
+- The draft order should have a customer with an email address (optional but recommended)
+
+## Steps
+
+### Step 1: Open the draft order detail page
+
+From the **Draft Orders** list, click on the draft order name to open its detail page.
+
+{/* screenshot: Draft order detail page showing the order name and details */}
+
+### Step 2: Click the Send Quote button
+
+At the bottom of the **Payment** section, click the **Send Quote** button. This button is only visible when the draft order status is not "Completed."
+
+{/* screenshot: Send Quote button at the bottom of the payment summary card */}
+
+### Step 3: Enter the recipient email
+
+In the send modal that opens, the **Send to** field is pre-filled with the customer's email address if one exists. You can modify this email or enter a different recipient address.
+
+{/* screenshot: Send modal with the Send to email field pre-filled with customer email */}
+
+### Step 4: Add BCC recipients (optional)
+
+Use the **BCC Emails** field to add additional email recipients. Type an email address and select **Add "[email]"** from the dropdown to add it as a tag. You can add multiple BCC recipients. Click the "x" on any tag to remove it.
+
+{/* screenshot: BCC Emails field with email tags added */}
+
+### Step 5: Select an invoice template
+
+Use the **Invoice template** dropdown to choose which Draft Order template to use for the PDF attachment. Only templates with the type "Draft Order" appear in this list.
+
+{/* screenshot: Invoice template dropdown showing available Draft Order templates */}
+
+### Step 6: Choose a language
+
+Under the **Language** section, choose between:
+
+- **Use billing language** (requires Ultimate plan) -- uses the language associated with the customer's billing profile. This option is disabled if the draft order has no customer.
+- **Custom language** -- select a specific language from the dropdown.
+
+{/* screenshot: Language choice list showing "Use billing language" and "Custom language" options */}
+
+### Step 7: Send the invoice
+
+Click the **Send** button at the bottom of the modal to send the draft order invoice email. The modal closes and the app sends the email with the PDF invoice attached.
+
+{/* screenshot: Send button at the bottom of the send modal */}
+
+### Step 8: Confirm the email was sent
+
+After sending, a success toast notification appears confirming the email was sent. If there is an error, an error banner displays at the top of the page with the error message.
+
+{/* screenshot: Success toast notification after sending the draft order invoice */}
+
+## Tips
+
+- The **Send Quote** button is hidden for draft orders with the "Completed" status, since completed drafts have already been converted to orders.
+- If the draft order has no customer associated, the **Send to** field will be empty and you must enter an email address manually.
+- The **Use billing language** option is available only on the Ultimate plan and requires the draft order to have an associated customer.
+- BCC recipients receive a copy of the email without the primary recipient knowing.
+- You can also send a draft order quote using email automation. See the email automation articles for automatic sending options.
+
+## Related Articles
+
+- [Understanding Draft Order Details](/docs/draft-orders/draft-details)
+- [Setting Up Email Automation Rules](/docs/email-automation/setup-automation)
+- [Configuring Email Templates](/docs/email-automation/email-templates)
+- [Printing a Draft Order Invoice](/docs/draft-orders/print-draft)

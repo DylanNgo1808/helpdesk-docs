@@ -1,0 +1,105 @@
+---
+title: "How to Combine Multiple Orders into One Invoice in Better PDF Invoice"
+description: "Learn how to merge multiple orders into a single combined invoice for B2B customers in the Better PDF Invoice app."
+---
+
+# How to Combine Multiple Orders into One Invoice
+
+Combining orders merges multiple separate orders into a single combined order with a unified invoice. This is especially useful for B2B customers who place multiple orders and need one consolidated invoice.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- Wholesale plan subscription
+- At least two orders from the same company with payment terms
+- Orders must be open (not closed, canceled, or fully paid)
+
+## Steps
+
+### Step 1: Navigate to the B2B Page
+
+From the order detail page of a B2B order, click **Combine orders** in the secondary actions bar. Alternatively, navigate to the B2B section from the app sidebar.
+
+{/* screenshot: Combine orders button on a B2B order detail page */}
+
+### Step 2: Select Orders to Combine
+
+On the company orders page, select two or more orders from the same company by checking the checkboxes next to each order.
+
+{/* screenshot: Company orders page with multiple orders selected */}
+
+### Step 3: Initiate the Combine
+
+Click the **Combine orders** button in the bulk actions. The app navigates to the Combine Orders page showing all selected orders.
+
+{/* screenshot: Combine orders bulk action button */}
+
+### Step 4: Review the Combined Fulfillments
+
+The main content area shows a **Fulfillments** section listing all line items from the selected orders grouped by their fulfillment status (e.g., "Unfulfilled"). Review the items, quantities, and pricing.
+
+{/* screenshot: Combined fulfillments section showing line items from multiple orders */}
+
+### Step 5: Configure Payment Terms
+
+The **Payment terms** section shows the payment due configuration. Select the payment terms type, issue date, and due date for the combined order.
+
+{/* screenshot: Payment terms section with type, issue date, and due date fields */}
+
+### Step 6: Add Shipping
+
+In the **Payment** section, click **Add shipping** to open the shipping modal. Choose from two options:
+- **Order shipping fee** -- select a shipping rate from one of the original orders
+- **Custom shipping fee** -- enter a custom shipping name and price
+
+{/* screenshot: Add shipping modal with Order shipping fee and Custom shipping fee options */}
+
+### Step 7: Configure Custom Shipping (Optional)
+
+If choosing custom shipping, enter a **Name** (e.g., "Free ship") and a **Price** in the currency field, then click **Add shipping** to apply.
+
+{/* screenshot: Custom shipping fee form with name and price fields */}
+
+### Step 8: Review the Payment Summary
+
+The Payment section shows the combined **Subtotal**, **Discount** (merged from all orders), **Shipping**, **Taxes**, and **Total**. Click **Show tax rate** to view the tax breakdown.
+
+{/* screenshot: Payment summary showing subtotal, discount, shipping, taxes, and total */}
+
+### Step 9: Select a Customer
+
+In the right sidebar, use **Select customer** to assign a customer to the combined order. The customer's contact information, shipping address, and billing address are populated automatically.
+
+{/* screenshot: Right sidebar with customer selection and address information */}
+
+### Step 10: Edit Addresses (Optional)
+
+Click **Edit shipping address** or **Edit billing address** in the right sidebar to modify the shipping or billing information for the combined order.
+
+{/* screenshot: Edit shipping address modal with address form fields */}
+
+### Step 11: Create the Combined Order
+
+Click **Create combined order** at the bottom of the Payment section. A confirmation modal appears explaining: "This action will merge the selected orders into this single order. The original selected orders will be canceled."
+
+{/* screenshot: Create combined order confirmation modal */}
+
+### Step 12: Confirm and Submit
+
+Click **Create combined order** in the confirmation modal to finalize. A success toast "Combine successfully" confirms the action, and you are redirected to the new combined order's detail page.
+
+{/* screenshot: Success toast after combined order is created */}
+
+## Tips
+
+- You can combine up to 10 orders at a time.
+- Orders must have payment terms and be from the same company to be combined.
+- The original orders are canceled after combining (unless the "Cancel original order" setting is disabled in your app settings).
+- Discount information from all original orders is automatically merged and displayed in the combined order.
+- You can modify or remove shipping after adding it by clicking the shipping line to open the edit or remove modal.
+
+## Related Articles
+
+- [Combine Company Orders](/docs/orders/combine-company)
+- [Order Details](/docs/orders/order-details)
+- [View Orders](/docs/orders/view-orders)

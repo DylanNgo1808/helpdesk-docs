@@ -1,0 +1,87 @@
+---
+title: "How to Edit an Existing Delivery Method in Better PDF Invoice"
+description: "Learn how to edit and update an existing delivery method's settings in the Better PDF Invoice app."
+---
+
+# How to Edit an Existing Delivery Method
+
+You can update any delivery method's name, template, file naming pattern, server credentials, or status at any time after creation.
+
+## Prerequisites
+
+- At least one delivery method already created in the app
+- A paid plan (Professional, Ultimate, or Wholesale) to enable/disable delivery
+
+## Steps
+
+### Step 1: Navigate to Settings
+
+From the Better PDF Invoice dashboard, click **Settings** in the left sidebar menu, then select the **Delivery** tab.
+
+{/* screenshot: Settings page with Delivery tab selected */}
+
+### Step 2: Open the Delivery Method
+
+In the delivery list, click on the name of the delivery method you want to edit. This opens the delivery detail page.
+
+{/* screenshot: Delivery list with a delivery name highlighted */}
+
+### Step 3: Update the Delivery Name
+
+To rename the delivery, edit the **Name** field with your new preferred name.
+
+{/* screenshot: Name field being edited */}
+
+### Step 4: Change the PDF Attached Template
+
+To use a different invoice template, open the **PDF attached template** dropdown and select a new template.
+
+{/* screenshot: PDF attached template dropdown with new selection */}
+
+### Step 5: Modify the PDF File Name
+
+Update the **PDF file name** field to change the naming pattern. Click **Variables** to see all available placeholders like `{{order_number}}` and `{{time_stamp}}`.
+
+{/* screenshot: PDF file name field with Variables link */}
+
+### Step 6: Update Server Credentials
+
+If you need to change the delivery server settings, update the fields in the **Delivery details** section:
+- **Host name** - server address
+- **Port** - server port
+- **Username** - authentication username
+- **Password** - authentication password
+- **Directory path** - target folder
+
+{/* screenshot: Delivery details section with editable fields */}
+
+### Step 7: Toggle the Delivery Status
+
+To enable or disable the delivery, click the **Turn on** or **Turn off** button next to the **Enable** label. The badge displays **On** (green) or **Off** to indicate the current status.
+
+{/* screenshot: Enable toggle showing On/Off badge with Turn on/Turn off button */}
+
+### Step 8: Test the Updated Connection
+
+If you changed any server credentials, click **Test connection** to verify the new settings work correctly.
+
+{/* screenshot: Test connection button */}
+
+### Step 9: Save Your Changes
+
+Click the **Save** button in the top-right corner or at the bottom of the page. A "Save successfully" notification confirms your changes were applied.
+
+{/* screenshot: Save button and success toast notification */}
+
+## Tips
+
+- Always test the connection after modifying server credentials to catch errors before they affect deliveries.
+- You can switch between delivery methods (e.g., from FTP to SFTP) by changing the **Method** dropdown. The form fields will update accordingly.
+- If you no longer need a delivery method, you can delete it instead of disabling it. See [Removing a delivery method](/docs/delivery-methods/delete-delivery).
+
+## Related Articles
+
+- [How to Set Up FTP Delivery](/docs/delivery-methods/ftp-setup)
+- [How to Set Up SFTP Delivery](/docs/delivery-methods/sftp-setup)
+- [How to Test Your Delivery Connection](/docs/delivery-methods/test-connection)
+- [How to Remove a Delivery Method](/docs/delivery-methods/delete-delivery)

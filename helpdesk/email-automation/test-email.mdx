@@ -1,0 +1,80 @@
+---
+title: "How to Send a Test Email in Better PDF Invoice"
+description: "Learn how to send a test automation email to verify your email settings in the Better PDF Invoice app."
+---
+
+# How to Send a Test Email
+
+Before relying on email automation for your live orders, you can send a test email to verify that your configuration is correct. The test email uses your current automation settings and sends a sample invoice to the email address you specify.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- Automation emails enabled with all required fields configured
+- A valid **Reply to** email address, **PDF attached template**, and **Send email when** trigger configured
+- At least one order in your store (the test email uses sample order data)
+
+## Steps
+
+### Step 1: Navigate to the Automation Emails settings
+
+In the Better PDF Invoice app, click **Emails** in the left navigation menu and select the **Automation Emails** tab.
+
+{/* screenshot: Automation Emails tab selected on the Emails page */}
+
+### Step 2: Verify your automation settings are complete
+
+Before sending a test email, make sure all required fields are filled in: the **Custom PDF file name**, **PDF attached template**, **Send email when** trigger, and **Reply to** address. The Send test button is disabled if automation is not enabled.
+
+{/* screenshot: Completed automation email form with all required fields filled in */}
+
+### Step 3: Click the Send Test button
+
+At the bottom of the Automation Emails page, click the **Send Test** button (with the send icon). This button only appears when the **Send automation email** toggle is enabled. If any required fields are missing, the form displays validation errors instead of opening the modal.
+
+{/* screenshot: Send Test button at the bottom of the automation emails page */}
+
+### Step 4: Enter the test recipient email
+
+A modal opens with the title "Send test email." Enter the email address where you want to receive the test email in the **Email** field (e.g., "username@example.com").
+
+{/* screenshot: Send test email modal with the email input field */}
+
+### Step 5: Send the test email
+
+Click the **Send email** button in the modal. The button shows a loading state while the email is being sent.
+
+{/* screenshot: Send email button in the modal with loading state */}
+
+### Step 6: Confirm the test email was sent
+
+After the email is sent successfully, the modal closes and a success toast notification appears with the message confirming the email was sent. If the send fails, an error message is displayed.
+
+{/* screenshot: Success toast notification after sending the test email */}
+
+### Step 7: Check your inbox
+
+Open the email inbox for the address you entered. Look for the test invoice email. Verify the following:
+
+- The email arrives in your inbox (check spam/junk if needed)
+- The reply-to address is correct
+- The PDF attachment or online view link is included (based on your Document access setting)
+- The PDF file name matches your custom file name configuration
+- The invoice template renders correctly
+
+{/* screenshot: Test email received in inbox showing the invoice PDF attachment */}
+
+## Tips
+
+- The test email uses your current unsaved settings. Save your settings first if you want the test to reflect your latest configuration.
+- If the **Send Test** button is disabled, make sure the **Send automation email** toggle is turned on.
+- Validation runs before the modal opens. If you see validation errors on the form fields (red error messages), fix those issues first before attempting to send a test.
+- Test emails do not appear in the email activity history table since they are not triggered by a real order event.
+- If you do not receive the test email, check your spam folder and verify that the email address you entered is correct.
+
+## Related Articles
+
+- [Setting Up Email Automation Rules](/helpdesk/email-automation/setup-automation)
+- [Configuring Email Templates](/helpdesk/email-automation/email-templates)
+- [Setting Up Email Sender and Reply-To](/helpdesk/email-automation/sender-config)
+- [Viewing Email Activity History](/helpdesk/email-automation/email-history)

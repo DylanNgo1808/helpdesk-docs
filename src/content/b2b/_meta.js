@@ -1,0 +1,7 @@
+export default {
+  "company-list": "Manage B2B Companies",
+  "company-details": "View Company Details",
+  "company-orders": "View and Manage Company Orders",
+  "wholesale-orders": "Manage Wholesale Orders",
+  "b2b-statements": "Create B2B Statements"
+}

@@ -1,0 +1,81 @@
+---
+title: "How to Set Up Email Sender and Reply-To in Better PDF Invoice"
+description: "Learn how to configure the reply-to address, BCC recipients, and document access options for automated emails in Better PDF Invoice."
+---
+
+# How to Set Up Email Sender and Reply-To
+
+Configuring the email sender settings ensures your automated invoice emails have the correct reply-to address and that the right people receive copies. You can also control how the invoice document is delivered to the customer.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- Automation emails enabled (see [Setting Up Email Automation Rules](/docs/email-automation/setup-automation))
+
+## Steps
+
+### Step 1: Navigate to the Automation Emails settings
+
+In the Better PDF Invoice app, click **Emails** in the left navigation menu. Ensure the **Automation Emails** tab is selected in the left sidebar.
+
+{/* screenshot: Automation Emails tab selected on the Emails page */}
+
+### Step 2: Enable the Send automation email toggle
+
+Make sure the **Send automation email** toggle is turned on. The reply-to and BCC fields are only visible when automation is enabled.
+
+{/* screenshot: Send automation email toggle in the on position with fields visible below */}
+
+### Step 3: Enter the Reply-to email address
+
+In the **Reply to** field, enter the email address you want customers to see when they reply to the automated invoice email (e.g., "sales@example.com"). The help text explains that this is the address replies will be directed to.
+
+{/* screenshot: Reply to field with a sample email address entered */}
+
+### Step 4: Add BCC email addresses
+
+In the **BCC Emails** field, enter one or more email addresses separated by commas (e.g., "accounting@example.com, manager@example.com"). These recipients receive a blind copy of every automated email sent. The help text explains the BCC behavior.
+
+{/* screenshot: BCC Emails field with comma-separated email addresses */}
+
+### Step 5: Enable Document access
+
+Toggle the **Document access** switch on. This option controls whether and how the PDF document is included in the email. A "Pro" badge appears if you are not on a Professional plan, and clicking the toggle redirects to the subscription page.
+
+{/* screenshot: Document access toggle with Pro badge for non-Pro users */}
+
+### Step 6: Choose the document delivery method
+
+After enabling Document access, select one of the two radio button options:
+
+- **View online** -- the email includes a link that lets the customer view the invoice in their browser
+- **Send PDF as attachment** -- the PDF file is attached directly to the email
+
+{/* screenshot: Radio buttons for View online and Send PDF as attachment */}
+
+### Step 7: Configure the Send to customer only option
+
+Toggle the **Send to customer only** option to control whether automated emails are sent only to orders with a valid customer email. When enabled, orders without a customer email address are skipped.
+
+{/* screenshot: Send to customer only toggle with descriptive help text */}
+
+### Step 8: Save your sender configuration
+
+After making changes, the save bar appears at the top of the page. Click **Save** to apply your sender settings. A success toast notification confirms the save.
+
+{/* screenshot: Save bar and success toast notification */}
+
+## Tips
+
+- The reply-to address does not change the "From" address of the email. The From address is determined by the email sending service.
+- BCC recipients receive a copy of every automated email. Use this to keep your accounting or fulfillment team informed.
+- The **View online** option generates a unique link for each order. The link directs the customer to a hosted version of the invoice.
+- The **Send PDF as attachment** option embeds the PDF directly in the email. Some email clients may block attachments, so consider using "View online" if customers report not receiving the PDF.
+- Document access requires a Professional plan or higher. On the Free plan, the toggle redirects to the upgrade page.
+
+## Related Articles
+
+- [Setting Up Email Automation Rules](/docs/email-automation/setup-automation)
+- [Configuring Email Templates](/docs/email-automation/email-templates)
+- [Sending a Test Email](/docs/email-automation/test-email)
+- [Viewing Email Activity History](/docs/email-automation/email-history)

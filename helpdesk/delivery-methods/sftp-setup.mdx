@@ -1,0 +1,102 @@
+---
+title: "How to Set Up SFTP Delivery in Better PDF Invoice"
+description: "Learn how to configure an SFTP delivery method to securely send PDF invoices to your server in the Better PDF Invoice app."
+---
+
+# How to Set Up SFTP Delivery
+
+SFTP (SSH File Transfer Protocol) delivery provides a secure, encrypted way to export PDF invoices to a remote server. SFTP is recommended over FTP when security is a priority, as all data is encrypted during transfer.
+
+## Prerequisites
+
+- A paid plan (Professional, Ultimate, or Wholesale) in Better PDF Invoice
+- Access credentials for your SFTP server (host name, port, username, password)
+- At least one PDF template configured in the app
+
+## Steps
+
+### Step 1: Navigate to Settings
+
+From the Better PDF Invoice dashboard, click **Settings** in the left sidebar menu, then select the **Delivery** tab.
+
+{/* screenshot: Settings page with Delivery tab selected */}
+
+### Step 2: Click Create Delivery
+
+Click the **Create delivery** button to begin configuring a new delivery method.
+
+{/* screenshot: Delivery list page with Create delivery button highlighted */}
+
+### Step 3: Enter the Delivery Name
+
+In the **Name** field, type a descriptive name for your delivery (e.g., "Secure SFTP Export"). The default name is "Untitled delivery".
+
+{/* screenshot: General information section with Name field */}
+
+### Step 4: Select a PDF Attached Template
+
+From the **PDF attached template** dropdown, choose the invoice template you want attached to exported PDF files. Only "Order" type templates are listed.
+
+{/* screenshot: PDF attached template dropdown showing available templates */}
+
+### Step 5: Configure the PDF File Name
+
+In the **PDF file name** field, set the naming convention for exported files. The default is `order_{{order_number}}_{{time_stamp}}`. Click **Variables** to browse all available filename variables.
+
+{/* screenshot: PDF file name field with .pdf suffix */}
+
+### Step 6: Select SFTP as the Delivery Method
+
+In the **Delivery details** section, open the **Method** dropdown and select **SFTP**.
+
+{/* screenshot: Method dropdown with SFTP selected */}
+
+### Step 7: Enter the Host Name
+
+In the **Host name** field, enter your SFTP server address (e.g., `216.3.128.12` or `sftp.yourserver.com`).
+
+{/* screenshot: Host name field in SFTP form */}
+
+### Step 8: Enter the Port
+
+In the **Port** field, enter your SFTP server port. The default SFTP port is `22`.
+
+{/* screenshot: Port field showing default value 22 */}
+
+### Step 9: Enter Your Username
+
+In the **Username** field, type the username used for SFTP authentication (e.g., `root`).
+
+{/* screenshot: Username field in SFTP form */}
+
+### Step 10: Enter Your Password
+
+In the **Password** field, enter the password for your SFTP account. The input is masked for security.
+
+{/* screenshot: Password field with masked input */}
+
+### Step 11: Enter the Directory Path
+
+In the **Directory path** field, specify the remote folder where PDF files will be uploaded (e.g., `/home/root/exports/daily`).
+
+{/* screenshot: Directory path field with placeholder example */}
+
+### Step 12: Save the Delivery
+
+Click the **Save** button in the top-right corner or at the bottom of the page to create your SFTP delivery method.
+
+{/* screenshot: Save button at bottom of page */}
+
+## Tips
+
+- SFTP uses port `22` by default, while FTP uses port `21`. Make sure you use the correct port for your server.
+- Always test your connection after entering credentials. See [Testing your delivery connection](/helpdesk/delivery-methods/test-connection).
+- Enable the delivery by clicking **Turn on** next to the Enable badge to activate automatic exports.
+- SFTP is more secure than FTP because it encrypts both credentials and file data during transfer.
+
+## Related Articles
+
+- [How to Test Your Delivery Connection](/helpdesk/delivery-methods/test-connection)
+- [How to Set Up FTP Delivery](/helpdesk/delivery-methods/ftp-setup)
+- [How to Edit an Existing Delivery Method](/helpdesk/delivery-methods/edit-delivery)
+- [Overview of All Delivery Integrations](/helpdesk/delivery-methods/integration-overview)

@@ -1,0 +1,94 @@
+---
+title: "How to Set Up Email Automation Rules in Better PDF Invoice"
+description: "Learn how to set up automatic email sending rules for order invoices in the Better PDF Invoice app."
+---
+
+# How to Set Up Email Automation Rules
+
+Email automation lets you automatically send PDF invoices to customers when specific order events occur, such as when an order is created, paid, fulfilled, or refunded. You configure automation rules on the Emails page.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- At least one order template configured
+- Customer email addresses on your orders
+
+## Steps
+
+### Step 1: Navigate to the Emails page
+
+In the Better PDF Invoice app, click **Emails** in the left navigation menu. The Emails page opens with a sidebar showing two tabs: **Automation Emails** and **Email Notification**.
+
+{/* screenshot: Emails page with the left sidebar showing Automation Emails and Email Notification tabs */}
+
+### Step 2: Select the Automation Emails tab
+
+Click **Automation Emails** in the left sidebar if it is not already selected. The right section displays the automation email configuration form with the heading and description.
+
+{/* screenshot: Automation Emails tab selected with the configuration form visible */}
+
+### Step 3: Enable the Send automation email toggle
+
+In the second card, find the **Send automation email** option with a toggle switch. Turn the toggle **on** to enable automatic email sending. A help text explains that this will automatically send invoice emails when the trigger event occurs.
+
+{/* screenshot: Send automation email toggle in the on position */}
+
+### Step 4: Select the trigger event
+
+Use the **Send email when** dropdown to choose which order event triggers the automatic email. The available options are:
+
+- **Order created** -- sends when a new order is placed
+- **Order paid** -- sends when an order payment is completed
+- **Order fulfilled** -- sends when an order is marked as fulfilled
+- **Order refunded** -- sends when a refund is created
+
+{/* screenshot: Send email when dropdown showing the four trigger event options */}
+
+### Step 5: Configure the Send to customer only option
+
+Toggle the **Send to customer only** option on or off. When enabled, emails are sent only to orders that have a customer with an email address. When disabled, emails are sent to all orders matching the trigger, even if the customer email may not be available.
+
+{/* screenshot: Send to customer only toggle with help text */}
+
+### Step 6: Set the Reply-to email address
+
+Enter your desired reply-to email address in the **Reply to** field (e.g., "sales@example.com"). This is the email address that appears when customers reply to the automated invoice email. The help text explains the purpose of this field.
+
+{/* screenshot: Reply to email field with placeholder text and help text */}
+
+### Step 7: Add BCC email addresses (optional)
+
+In the **BCC Emails** field, enter one or more email addresses separated by commas (e.g., "foo@example.com, bar@example.com"). These addresses receive a blind carbon copy of every automated invoice email. The help text explains BCC behavior.
+
+{/* screenshot: BCC Emails field with example comma-separated emails */}
+
+### Step 8: Configure document access options
+
+Toggle **Document access** on to include a link or attachment in the email. Then choose one of two radio button options:
+
+- **View online** -- includes a link for the customer to view the invoice online
+- **Send PDF as attachment** -- attaches the PDF file directly to the email
+
+This feature requires a Professional plan or higher.
+
+{/* screenshot: Document access toggle with View online and Send PDF as attachment radio buttons */}
+
+### Step 9: Save your automation settings
+
+After configuring all options, click **Save** in the save bar that appears at the top of the page. A success toast notification confirms your settings were saved.
+
+{/* screenshot: Save bar at the top of the page with Save and Discard buttons */}
+
+## Tips
+
+- Only one trigger event can be active at a time. If you need emails sent on multiple events, consider using the API integration option instead.
+- The **Send by AEM** (Avada Email Marketing) toggle is an alternative to the built-in automation. Enabling one automatically disables the other.
+- Changes are not saved until you click **Save** in the save bar. You can click **Discard** to revert unsaved changes.
+- The automation email history table appears below the settings when automation is enabled, showing you a log of all sent emails.
+
+## Related Articles
+
+- [Configuring Email Templates](/helpdesk/email-automation/email-templates)
+- [Setting Up Email Sender and Reply-To](/helpdesk/email-automation/sender-config)
+- [Sending a Test Email](/helpdesk/email-automation/test-email)
+- [Viewing Email Activity History](/helpdesk/email-automation/email-history)

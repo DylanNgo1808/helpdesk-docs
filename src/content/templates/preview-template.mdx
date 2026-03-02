@@ -1,0 +1,98 @@
+---
+title: "How to Preview and Test Your Template in Better PDF Invoice"
+description: "Learn how to preview and test your PDF template using the live preview, Liquid editor, and PDF rendering in the Better PDF Invoice app."
+---
+
+# How to Preview and Test Your Template
+
+The template editor includes a built-in live preview that renders your template as a PDF document. You can use this to verify your design, test Liquid code changes, and confirm that all fields display correctly before saving.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- An existing template open in the editor, or a new template being created
+- Desktop browser (the preview panel is not available on mobile devices)
+
+## Steps
+
+### Step 1: Open the template editor
+
+From the **Templates** page, click the **Edit** button on the template you want to preview. The full-screen editor opens with the preview panel in the center.
+
+{/* screenshot: Template editor with the center preview panel visible */}
+
+### Step 2: View the live PDF preview
+
+The center panel automatically renders your template as a PDF document using sample order data. The preview shows how the final PDF will look when printed or downloaded, including your logo, colors, fonts, and all enabled content fields.
+
+{/* screenshot: Live PDF preview showing a rendered invoice with sample data */}
+
+### Step 3: Trigger a preview refresh
+
+The preview automatically refreshes when you:
+
+- Toggle content fields on or off in the **Content** tab
+- Change design settings (color, font, logo size) in the **Design** tab
+- Switch the template theme in the **Theme** tab
+- Change the document type in the **General** tab
+
+For text fields like footer notes, thank-you messages, or custom number prefixes, the preview refreshes after a 1-second debounce delay once you stop typing.
+
+{/* screenshot: Preview panel with a loading indicator during refresh */}
+
+### Step 4: Manually refresh the preview
+
+Click the **Preview** tab at the top of the center panel to manually trigger a fresh PDF render. This is especially useful after editing Liquid or CSS code, which does not automatically trigger a preview update.
+
+{/* screenshot: Preview tab button at the top of the center panel */}
+
+### Step 5: Test Liquid template changes
+
+Click the **Liquid** tab at the top of the center panel to open the Liquid HTML editor. Make your changes to the template markup, then click back to the **Preview** tab to see the rendered result. The preview re-renders the full PDF with your updated Liquid code.
+
+{/* screenshot: Liquid editor tab with HTML/Liquid markup visible */}
+
+### Step 6: Test CSS style changes
+
+Click the **Style** tab to open the CSS editor. Modify styles such as spacing, borders, font sizes, or custom colors. Click the **Preview** tab to see how your CSS changes affect the rendered PDF document.
+
+{/* screenshot: Style editor tab with CSS code visible */}
+
+### Step 7: Reference available variables
+
+Click the **Variables** tab to open the variable reference sheet. This displays all available Liquid variables organized by category. Use this to find the correct variable names for order data, customer information, line items, and shop details. Clicking the Variables tab automatically opens the Liquid editor so you can insert variables directly.
+
+{/* screenshot: Variables reference panel listing available Liquid variables */}
+
+### Step 8: Preview from the Templates page
+
+From the **Templates** page (without opening the editor), click the **Preview** button on any template card. A modal opens showing a full-size thumbnail preview of the template design. This is useful for quickly comparing templates without entering the editor.
+
+{/* screenshot: Template preview modal on the Templates page */}
+
+### Step 9: Verify on mobile note
+
+On mobile devices (small screens), the preview panel displays a message indicating that the full preview is not available. Use a desktop browser for the best template editing and preview experience.
+
+{/* screenshot: Mobile view showing the "Feature not available" message */}
+
+### Step 10: Save after testing
+
+Once you have verified that the template looks correct in the preview, click **Save** in the save bar at the bottom. The template is now ready to use for printing, sending, and downloading PDF documents.
+
+{/* screenshot: Save bar at the bottom after successful preview verification */}
+
+## Tips
+
+- The live preview uses sample order data -- actual invoices will show real order information from your Shopify store
+- If the preview shows a blank or broken layout, check the Liquid tab for syntax errors in your template code
+- Use the Style tab for quick visual tweaks without modifying the Liquid structure
+- The Variables panel is a helpful reference when customizing Liquid code -- no need to memorize variable names
+- For the most accurate preview, make sure Developer Mode is enabled in Settings to access the Liquid, Style, and Variables tabs
+
+## Related Articles
+
+- [Edit Design & CSS](/docs/templates/edit-design)
+- [Edit Content & Fields](/docs/templates/edit-content)
+- [Create a Template](/docs/templates/create-template)
+- [Browse Templates](/docs/templates/browse-templates)

@@ -1,0 +1,88 @@
+---
+title: "How to View Email Activity History in Better PDF Invoice"
+description: "Learn how to view the history of automated invoice emails sent from the Better PDF Invoice app."
+---
+
+# How to View Email Activity History
+
+The email activity history table shows a log of all automated invoice emails sent by the app. You can see which orders triggered emails, the event type, the delivery status, and the date. This helps you monitor email delivery and troubleshoot issues.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- Automation emails enabled (the history table appears when automation is or has been active)
+
+## Steps
+
+### Step 1: Navigate to the Automation Emails settings
+
+In the Better PDF Invoice app, click **Emails** in the left navigation menu and select the **Automation Emails** tab.
+
+{/* screenshot: Automation Emails tab selected on the Emails page */}
+
+### Step 2: Locate the Activity History section
+
+Below the automation email settings cards, find the **Activity History** card. Click the card header or the expand/collapse arrow icon to toggle the history table open.
+
+{/* screenshot: Activity History card header with expand/collapse arrow */}
+
+### Step 3: Expand the history table
+
+Click the **Activity History** header to expand the collapsible section. The table loads and displays the most recent automated email records.
+
+{/* screenshot: Expanded Activity History table showing email records */}
+
+### Step 4: Review the table columns
+
+The history table shows five columns:
+
+- **Order Name** -- the Shopify order name (e.g., "#1001"), linked to the order in your Shopify admin
+- **Event** -- the trigger event that caused the email to be sent, displayed as a badge (e.g., "Order paid", "Order created", "Order fulfilled", "Order refunded")
+- **Status** -- the delivery status badge: **Succeed** (green), **Canceled** (yellow with tooltip explanation), or **Failed** (red with tooltip showing the error message)
+- **Date** -- the date and time the email was sent
+- **Actions** -- a resend button for failed or canceled emails
+
+{/* screenshot: Activity history table with columns labeled: Order Name, Event, Status, Date, Actions */}
+
+### Step 5: Check the status of a sent email
+
+Look at the **Status** column for each row:
+
+- A green **Succeed** badge means the email was delivered successfully.
+- A yellow **Canceled** badge means the email was skipped (hover to see the reason, such as missing customer email).
+- A red **Failed** badge means the email failed to send (hover to see the error message).
+
+{/* screenshot: Status badges showing Succeed, Canceled, and Failed states with tooltips */}
+
+### Step 6: View the order in Shopify
+
+Click the order name link (e.g., "#1001") in the **Order Name** column to open the order directly in your Shopify admin in a new tab.
+
+{/* screenshot: Order name link in the history table */}
+
+### Step 7: Load more history records
+
+At the bottom of the table, click the **Load more** button to fetch and display additional email history records. This button is disabled when there are no more records to load.
+
+{/* screenshot: Load more button at the bottom of the history table */}
+
+### Step 8: Handle empty history
+
+If no automated emails have been sent yet, the table displays an empty state with the message "No results found" and an illustration.
+
+{/* screenshot: Empty state in the activity history table */}
+
+## Tips
+
+- The history table only appears when the **Send automation email** toggle is or has been enabled. If you have never enabled automation, the table is hidden.
+- Hover over **Canceled** and **Failed** status badges to see the specific reason or error message in a tooltip.
+- The **Load more** button uses cursor-based pagination, so each click loads the next batch of records chronologically.
+- The history table refreshes automatically after you resend an email, so you can immediately see the updated status.
+- Emails with a **Succeed** status cannot be resent (the resend button is disabled for successful emails).
+
+## Related Articles
+
+- [Setting Up Email Automation Rules](/helpdesk/email-automation/setup-automation)
+- [Resending Failed or Past Emails](/helpdesk/email-automation/resend-email)
+- [Sending a Test Email](/helpdesk/email-automation/test-email)
+- [Configuring Email Templates](/helpdesk/email-automation/email-templates)

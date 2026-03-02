@@ -1,0 +1,91 @@
+---
+title: "How to Use Bulk Actions from the Order List in Better PDF Invoice"
+description: "Learn how to print, download, and send PDF invoices for multiple orders at once using bulk actions on the Shopify Admin order list page."
+---
+
+# How to Use Bulk Actions from the Order List
+
+Better PDF Invoice adds bulk action links to the Shopify Admin order list page. When you select multiple orders, you can mass print, mass download, or mass send invoices for all selected orders in a single operation.
+
+## Prerequisites
+
+- Better PDF Invoice app installed and active on your Shopify store
+- At least two orders in your store to use bulk actions
+- An active subscription plan that supports printing
+
+## Steps
+
+### Step 1: Open the Orders List in Shopify Admin
+
+Navigate to **Orders** in your Shopify Admin sidebar. The order index page displays all of your store's orders in a table.
+
+{/* screenshot: Shopify Admin Orders list page */}
+
+### Step 2: Select Multiple Orders
+
+Click the checkboxes next to the orders you want to process. You can select individual orders or use the top checkbox to select all visible orders on the page. A selection bar appears at the top showing the number of selected orders.
+
+{/* screenshot: Order list with multiple orders selected and selection bar visible */}
+
+### Step 3: Open the Bulk Actions Menu
+
+With orders selected, click the **"..."** (more actions) button in the selection bar at the top of the order list. This reveals the available bulk action links provided by Better PDF Invoice.
+
+{/* screenshot: Selection bar showing the more actions dropdown with bulk action options */}
+
+### Step 4: Mass Print Orders Using "Mass print order by Avada"
+
+Click **Mass print order by Avada** from the bulk actions menu. The app opens a mass print preview page showing all selected orders combined into a single PDF.
+
+On the mass print page you can:
+- **Select templates** -- Choose one or more Order-type templates from the checklist on the right sidebar.
+- **Choose a language** -- Use the language dropdown to set the invoice language.
+- **Preview the combined PDF** -- The left panel shows a live preview of all invoices rendered together.
+
+Click the **Print** button in the top-right to download the combined PDF file.
+
+{/* screenshot: Mass print preview page with combined PDF and template selector */}
+
+### Step 5: Mass Download Orders Using "Download mass order by Avada"
+
+Click **Download mass order by Avada** from the bulk actions menu. The app generates and downloads a combined PDF file containing invoices for all selected orders. A loading indicator shows while the file is being prepared.
+
+{/* screenshot: Mass download in progress with loading indicator */}
+
+### Step 6: Mass Send Orders Using "Send by Avada"
+
+Click **Send by Avada** from the bulk actions menu. The app sends individual invoice emails to each customer associated with the selected orders. A spinner displays while emails are being sent, followed by a success notification when complete.
+
+{/* screenshot: Mass send in progress with spinner and success notification */}
+
+### Step 7: Review the Mass Print Preview
+
+On the mass print preview page, the PDF preview on the left renders all selected orders sequentially. Scroll through the preview to verify each invoice before printing. Use the template checklist and language dropdown on the right to adjust output settings.
+
+{/* screenshot: Scrollable PDF preview showing multiple invoices */}
+
+### Step 8: Handle the Maximum Order Limit
+
+Bulk print and download operations support up to **30 orders** at a time. If you select more than 30 orders, the app displays a message indicating that the operation has been queued for processing. You can continue working while the bulk job runs in the background.
+
+{/* screenshot: Message displayed when more than 30 orders are selected */}
+
+### Step 9: Navigate Back to the Order List
+
+Click the **Back** arrow button in the top-left of the mass print or mass download page to return to the Shopify Admin order list.
+
+{/* screenshot: Back button on the mass print page */}
+
+## Tips
+
+- For best performance, select 30 or fewer orders at a time for mass print and download operations.
+- Mass send uses your configured email template and delivery settings for each order individually.
+- You can combine mass print with multiple templates to generate packing slips and invoices together in one PDF.
+- If some selected orders are marked as "Unprintable," they may be excluded from the output. Check each order's print status on the Orders page in the app.
+
+## Related Articles
+
+- [How to Use Order Page Actions](/helpdesk/shopify-extensions/order-page-actions)
+- [How to Mass Print Orders](/helpdesk/orders/mass-print)
+- [How to View and Navigate Your Order List](/helpdesk/orders/view-orders)
+- [How to Filter Orders](/helpdesk/orders/filter-orders)

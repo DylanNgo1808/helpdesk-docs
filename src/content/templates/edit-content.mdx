@@ -1,0 +1,147 @@
+---
+title: "How to Edit Template Content and Fields in Better PDF Invoice"
+description: "Learn how to edit template content fields, toggle order details, and configure extra information in the Better PDF Invoice app."
+---
+
+# How to Edit Template Content and Fields
+
+The **Content** tab controls which data fields appear on your PDF documents. You can toggle order details, payment and shipping information, line item fields, totals, customer details, and extra information like notes, QR codes, and social links.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- An existing template open in the editor
+- Access to the app admin dashboard
+
+## Steps
+
+### Step 1: Open the template editor
+
+From the **Templates** page, click the **Edit** button on the template you want to modify.
+
+{/* screenshot: Templates page with Edit button highlighted */}
+
+### Step 2: Navigate to the Content tab
+
+In the left sidebar, click the **Content** menu item. The help text reads "Edit template." The right panel displays all content toggles organized into sections.
+
+{/* screenshot: Left sidebar with Content tab selected */}
+
+### Step 3: Configure order information fields
+
+Under the **Order information** section heading, toggle the following fields on or off using their checkboxes:
+
+- **Order number** -- Show or hide the order number on the document
+- **Custom sequence number** -- When enabled, creates a separate invoice numbering system with a custom prefix and suffix (e.g., INV-1001-SHOP). Enter the **Prefix** (e.g., "INV-") and **Suffix** (e.g., "-SHOP") in the text fields that appear
+- **Order amount** -- Display the total order amount
+- **Order barcode** -- Include a barcode for the order
+- **Order tag** -- Show order tags
+- **Order metafields** -- Display order metafield data
+- **Order PO number** -- Show the purchase order number (Professional plan required)
+- **Order date** -- Display the order date
+- **Using PDF document generated date** -- When Order date is enabled, toggle this to use the PDF generation date instead of the original order date
+- **Choose format date** -- Select a date format from the dropdown (e.g., DD/MM/YYYY, MM/DD/YYYY, MMM DD, YYYY)
+- **Payment terms** -- Show payment terms
+- **Payment due date** -- Show the payment due date
+
+{/* screenshot: Order information section with checkboxes and date format dropdown */}
+
+### Step 4: Configure payment and shipping fields
+
+Under the **Payment & shipping information** section, toggle:
+
+- **Payment address** -- Show the billing address
+- **Shipping address** -- Show the shipping address
+- **Payment method** -- Show how the customer paid
+- **Credit card number** -- When Payment method is enabled, optionally show the last digits of the credit card
+- **Shipping method** -- Display the shipping carrier and method
+- **Shipping discount** -- Show any shipping discounts applied
+
+{/* screenshot: Payment & shipping information section with checkboxes */}
+
+### Step 5: Configure line item fields
+
+Under the **Items ordered information** section, toggle:
+
+- **Item image** -- Show product images for each line item
+- **Item SKU** -- Display the SKU for each product
+- **Item barcode** -- Show the product barcode
+- **Item discount** -- Show per-item discounts
+- **Item weight** -- Display the weight of each item
+- **Item tax** -- Show the tax amount per item
+
+{/* screenshot: Items ordered information section with checkboxes */}
+
+### Step 6: Configure order total fields
+
+Under the **Order total information** section, toggle:
+
+- **Order discount** -- Show the total discount applied to the order
+- **Order subtotal** -- Show the subtotal before taxes and shipping
+- **Order TAX/VAT/GTS** -- Show the total tax amount
+- **Custom order taxes** -- When Order TAX is disabled, create custom tax entries with a **TAX name** and **Percentage** for each (Professional plan required). Click **Add a TAX** to add more entries
+- **Total quantity** -- Show the total number of items
+- **Order paid by customer** -- Show the amount paid
+- **Order refund amount** -- Show the refund total
+- **Order net payment** -- Show the net payment after refunds
+- **Balance** -- Show the remaining balance
+
+{/* screenshot: Order total information section with checkboxes and custom tax fields */}
+
+### Step 7: Configure customer information
+
+Under the **Customer information** section (when available for your template), toggle:
+
+- **Customer metafields** -- Display customer metafield data
+- **Customer email** -- Show the customer's email address
+- **Customer phone** -- Show the customer's phone number
+
+{/* screenshot: Customer information section with checkboxes */}
+
+### Step 8: Configure extra information
+
+Under the **Extra information** section, toggle:
+
+- **Order note** -- Display the order note from Shopify (Professional plan required)
+- **Footer note** -- Add a custom footer note to the document (Professional plan required). When enabled, a text area appears to enter the footer content
+- **Store domain** -- Show your store's domain URL on the document. When enabled, a text field appears to customize the displayed URL
+- **Thank you note** -- Add a thank-you message. When enabled, a text area appears to enter your message (default: "Thank you for your business")
+- **Order QR code** -- Display a QR code for the order
+- **Thank you note content** -- Add an additional page of content. Click **Open additional page** to edit in a modal (Professional plan required)
+- **Paid/Unpaid watermark** -- Overlay a "Paid" or "Unpaid" watermark on the document
+
+{/* screenshot: Extra information section with checkboxes and text areas */}
+
+### Step 9: Configure social information
+
+Under the **Social information** section (when available), toggle the section on using the switch, then enter URLs for:
+
+- **Facebook url** -- Your Facebook page URL
+- **Instagram url** -- Your Instagram profile URL
+- **X url** -- Your X (Twitter) profile URL
+- **Pinterest url** -- Your Pinterest profile URL
+
+Invalid URLs display an error message (e.g., "Please enter a valid Facebook link.").
+
+{/* screenshot: Social information section with URL text fields */}
+
+### Step 10: Save your changes
+
+After configuring all desired content fields, click **Save** in the save bar at the bottom. The live preview in the center panel updates automatically as you toggle fields on and off.
+
+{/* screenshot: Save bar at the bottom of the editor */}
+
+## Tips
+
+- Some fields are only available on certain template designs -- if you do not see a field listed above, it may not be supported by your current theme
+- Fields marked with a **Professional** or **Ultimate** badge require a plan upgrade to use
+- The custom sequence number format follows the pattern: `{{prefix}}{{order_number}}{{suffix}}`
+- Social media URLs are validated against expected patterns. Make sure to enter the full URL including `https://`
+- Changes to most content fields trigger an automatic preview refresh so you can see the result immediately
+
+## Related Articles
+
+- [Edit General Settings](/docs/templates/edit-general)
+- [Customize Theme](/docs/templates/edit-theme)
+- [Edit Design & CSS](/docs/templates/edit-design)
+- [Preview & Test](/docs/templates/preview-template)

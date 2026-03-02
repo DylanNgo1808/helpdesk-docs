@@ -1,0 +1,8 @@
+export default {
+  "view-drafts": "Viewing Draft Orders",
+  "draft-details": "Draft Order Details",
+  "print-draft": "Printing a Draft Order",
+  "mass-print-drafts": "Printing Multiple Draft Orders",
+  "download-draft": "Downloading Draft Orders as PDF",
+  "send-draft": "Sending a Draft Order Invoice"
+}

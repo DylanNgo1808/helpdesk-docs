@@ -1,0 +1,94 @@
+---
+title: "How to Choose a Delivery Integration in Better PDF Invoice"
+description: "Learn about all available delivery integrations for automatically exporting PDF invoices in the Better PDF Invoice app."
+---
+
+# How to Choose a Delivery Integration
+
+Better PDF Invoice supports multiple delivery methods for automatically exporting PDF invoices to external storage or servers. This guide provides an overview of each available integration to help you choose the right one for your workflow.
+
+## Prerequisites
+
+- A paid plan (Professional, Ultimate, or Wholesale) in Better PDF Invoice
+- At least one PDF template configured in the app
+
+## Steps
+
+### Step 1: Navigate to the Delivery Settings
+
+From the Better PDF Invoice dashboard, click **Settings** in the left sidebar, then select the **Delivery** tab to view your existing delivery methods.
+
+{/* screenshot: Settings page with Delivery tab showing delivery list */}
+
+### Step 2: Review Your Current Deliveries
+
+The delivery list shows all configured delivery methods. You can filter by status using the tabs: **All**, **Enable**, and **Disable**.
+
+{/* screenshot: Delivery list with status filter tabs */}
+
+### Step 3: Understand FTP Delivery
+
+**FTP (File Transfer Protocol)** uploads PDF files to a remote server using the FTP protocol. This is a widely supported method for integrating with legacy systems.
+
+Key settings:
+- **Host name** - server IP address or domain (e.g., `216.3.128.12`)
+- **Port** - default is `21`
+- **Username** and **Password** for authentication
+- **Directory path** - remote folder for uploaded files
+
+{/* screenshot: FTP form fields in the delivery setup */}
+
+### Step 4: Understand SFTP Delivery
+
+**SFTP (SSH File Transfer Protocol)** provides the same file upload functionality as FTP but with encrypted data transfer. Use SFTP when security is a priority.
+
+Key settings:
+- **Host name** - server IP address or domain
+- **Port** - default is `22`
+- **Username** and **Password** for authentication
+- **Directory path** - remote folder for uploaded files
+
+{/* screenshot: SFTP form fields in the delivery setup */}
+
+### Step 5: Understand Google Drive Delivery
+
+**Google Drive Folder** exports PDF invoices directly to a folder in your Google Drive account. This method uses OAuth authorization instead of manual credentials.
+
+Key settings:
+- Click **Connect** to authorize access to your Google Drive
+- After authorization, exports are saved to a linked Google Drive folder
+- Use **Reconnect** if you need to change the connected account
+
+{/* screenshot: Google Drive form with Connect button and linked folder */}
+
+### Step 6: Create a New Delivery
+
+Click **Create delivery** to set up a new delivery method. On the creation page, the **Method** dropdown lets you choose between **FTP**, **SFTP**, or **Google Drive Folder**.
+
+{/* screenshot: Method dropdown showing all three options */}
+
+### Step 7: Configure General Settings
+
+Every delivery method shares these common settings in the **General information** section:
+- **Name** - a descriptive label for the delivery
+- **PDF attached template** - the invoice template to use
+- **PDF file name** - the naming pattern for exported files (supports variables like `{{order_number}}`)
+- **Enable** toggle with **Turn on** / **Turn off** button
+
+{/* screenshot: General information section with all common fields */}
+
+## Tips
+
+- Use **SFTP** instead of FTP whenever possible for better security.
+- **Google Drive** is the easiest option if you do not have a dedicated server and want cloud-based storage.
+- You can create multiple delivery methods with different configurations (e.g., one FTP delivery for your accounting system and one Google Drive delivery for backup).
+- FTP and SFTP deliveries include a **Test connection** button so you can verify credentials before saving. Google Drive uses a different authorization flow.
+- Each delivery method can use a different PDF template, allowing you to send different invoice formats to different destinations.
+
+## Related Articles
+
+- [How to Set Up FTP Delivery](/helpdesk/delivery-methods/ftp-setup)
+- [How to Set Up SFTP Delivery](/helpdesk/delivery-methods/sftp-setup)
+- [How to Test Your Delivery Connection](/helpdesk/delivery-methods/test-connection)
+- [How to Edit an Existing Delivery Method](/helpdesk/delivery-methods/edit-delivery)
+- [How to Remove a Delivery Method](/helpdesk/delivery-methods/delete-delivery)

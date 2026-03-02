@@ -1,0 +1,132 @@
+---
+title: "How to Edit Template Design and CSS in Better PDF Invoice"
+description: "Learn how to customize template design settings including logo size, fonts, colors, background images, and custom CSS in the Better PDF Invoice app."
+---
+
+# How to Edit Template Design and CSS
+
+The **Design** tab controls the visual appearance of your PDF documents. Adjust your logo size, choose a font family, set a font size, pick a primary color, and select a background image. For advanced users, the template editor also provides access to the Liquid HTML and CSS code through the **Liquid** and **Style** tabs in the preview panel.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- An existing template open in the editor
+- Access to the app admin dashboard
+- For Liquid/CSS editing: Developer Mode enabled in Settings
+
+## Steps
+
+### Step 1: Open the template editor
+
+From the **Templates** page, click the **Edit** button on the template you want to customize.
+
+{/* screenshot: Templates page with Edit button highlighted */}
+
+### Step 2: Navigate to the Design tab
+
+In the left sidebar, click the **Design** menu item. The help text reads "Edit the design inside the document." The right panel displays all design controls.
+
+{/* screenshot: Left sidebar with Design tab selected */}
+
+### Step 3: Adjust the logo size
+
+Use the **Logo size** range slider to control how large your uploaded logo appears on the document. Drag the slider between 0% and 100%. The current percentage value displays next to the slider.
+
+{/* screenshot: Logo size range slider set to a value */}
+
+### Step 4: Choose a font family
+
+Click the font selector (which displays the current font name, or "Font" if none is set). A collapsible panel expands showing a list of available fonts:
+
+- Roboto
+- Open Sans
+- Lato
+- Oswald
+- Montserrat
+- EB Garamond
+- Josefin Sans
+- Times
+- Times New Roman
+- Arial
+- Cairo (Arabic)
+- Heebo (Hebrew)
+- Noto Sans (Japanese)
+- Noto Sans (Korea)
+- Proxima Nova
+- Urbanist
+
+Click a font name to select it. The font selector updates to display the selected font in its own typeface.
+
+{/* screenshot: Expanded font selector showing the list of available fonts */}
+
+### Step 5: Set the font size
+
+In the **Font size** number field, enter a value between 10 and 100. This controls the base font size used throughout the PDF document. The default is 16.
+
+{/* screenshot: Font size number input field */}
+
+### Step 6: Select a background image
+
+Under the **Select image** heading (available for templates that support background images), choose from the preset background categories:
+
+- **Pets & animals** -- Warm, nature-themed background
+- **Gifts & special events** -- Festive, colorful background
+- **Toys & hobbies** -- Playful, blue-toned background
+- **Sport** -- Dynamic, purple-toned background
+
+Click a thumbnail to apply that background. The selected image is highlighted with a border. Selecting a background also updates the primary color to match the theme.
+
+{/* screenshot: Background image selection thumbnails with one selected */}
+
+### Step 7: Choose a primary color
+
+Use the **Primary color** color picker to set the accent color used for headings, borders, and highlights throughout the document. Click the color swatch to open the color picker, or type a hex code directly. Preset color options include:
+
+- #46546D (slate blue)
+- #6BAAB9 (teal)
+- #E6604E (coral red)
+- #CAB18E (tan)
+- #2e826c (green)
+- #e47284 (pink)
+- #919eab (gray)
+
+{/* screenshot: Primary color picker with color swatches and hex input */}
+
+### Step 8: Edit the Liquid HTML (Developer Mode)
+
+In the center preview panel, click the **Liquid** tab to access the template's HTML markup using Liquid syntax. This code editor lets you modify the structure and layout of the PDF document. Use Liquid variables to insert dynamic order data.
+
+{/* screenshot: Liquid tab showing the HTML/Liquid code editor */}
+
+### Step 9: Edit the CSS styles (Developer Mode)
+
+Click the **Style** tab in the center preview panel to access the template's CSS stylesheet. Modify CSS rules to fine-tune spacing, colors, borders, and other visual properties beyond what the Design tab controls offer.
+
+{/* screenshot: Style tab showing the CSS code editor */}
+
+### Step 10: Use template variables
+
+Click the **Variables** tab in the center preview panel to open the variable reference sheet. This panel lists all available Liquid variables you can use in your template (e.g., order data, customer info, shop details). Clicking Variables automatically switches to the Liquid editor so you can insert variables directly.
+
+{/* screenshot: Variables panel showing available Liquid variables */}
+
+### Step 11: Preview and save
+
+Click the **Preview** tab in the center panel to see the rendered PDF with your design changes. Once satisfied, click **Save** in the save bar at the bottom.
+
+{/* screenshot: Preview tab showing the rendered PDF with design changes applied */}
+
+## Tips
+
+- The **Liquid**, **Style**, and **Variables** tabs only appear when Developer Mode is enabled. Go to **Settings** and enable **Developer Mode** to access these advanced editing features
+- When editing Liquid or CSS, the preview does not update in real time -- click the **Preview** tab to regenerate the PDF
+- Selecting a background image also changes the primary color. If you want a specific color with a specific background, set the background first, then adjust the color
+- Use Google Fonts for consistent cross-platform rendering. Fonts like Cairo, Heebo, and Noto Sans provide support for Arabic, Hebrew, Japanese, and Korean scripts
+- Keep custom CSS minimal to avoid conflicts with the base template styles
+
+## Related Articles
+
+- [Edit General Settings](/helpdesk/templates/edit-general)
+- [Edit Content & Fields](/helpdesk/templates/edit-content)
+- [Preview & Test](/helpdesk/templates/preview-template)
+- [Create a Template](/helpdesk/templates/create-template)

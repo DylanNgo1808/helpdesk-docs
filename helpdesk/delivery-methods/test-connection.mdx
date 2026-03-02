@@ -1,0 +1,82 @@
+---
+title: "How to Test Your Delivery Connection in Better PDF Invoice"
+description: "Learn how to test your FTP or SFTP delivery connection to verify your server credentials are correct in the Better PDF Invoice app."
+---
+
+# How to Test Your Delivery Connection
+
+Before saving a delivery method, you can test the connection to make sure your server credentials are correct. This prevents failed deliveries caused by incorrect settings.
+
+## Prerequisites
+
+- An FTP or SFTP delivery method being configured (new or existing)
+- Valid server credentials (host name, port, username, password)
+
+## Steps
+
+### Step 1: Open a Delivery Method
+
+Navigate to **Settings** > **Delivery** tab and either create a new delivery or click an existing FTP/SFTP delivery to edit it.
+
+{/* screenshot: Delivery list page showing existing deliveries */}
+
+### Step 2: Select FTP or SFTP as the Method
+
+In the **Delivery details** section, confirm that your **Method** is set to either **FTP** or **SFTP**. The test connection feature is available for both protocols.
+
+{/* screenshot: Method dropdown showing FTP or SFTP selected */}
+
+### Step 3: Fill in Your Server Credentials
+
+Enter your server details in the Options section:
+- **Host name** - your server IP address or domain
+- **Port** - `21` for FTP or `22` for SFTP
+- **Username** - your server login username
+- **Password** - your server login password
+- **Directory path** - the target folder on the server
+
+{/* screenshot: Filled-in FTP/SFTP form fields */}
+
+### Step 4: Click Test Connection
+
+Click the **Test connection** button located below the Directory path field. The button will show a loading spinner while the connection is being tested.
+
+{/* screenshot: Test connection button with loading state */}
+
+### Step 5: Review the Result
+
+After the test completes, a toast notification will appear:
+- **"Connection is correct"** - your credentials are valid and the app can reach your server.
+- **"Connection is incorrect"** - one or more settings are wrong. Double-check your host name, port, username, and password.
+
+{/* screenshot: Toast notification showing connection result */}
+
+### Step 6: Fix Any Issues (If Needed)
+
+If the connection test fails, verify each field:
+- Confirm the **Host name** is reachable from the internet
+- Check that the **Port** matches your server configuration
+- Verify the **Username** and **Password** are correct
+- Ensure the **Directory path** exists on the server
+
+{/* screenshot: Form fields highlighted for review after failed test */}
+
+### Step 7: Save the Delivery
+
+Once the connection test succeeds, click the **Save** button to save your delivery method with the verified credentials.
+
+{/* screenshot: Save button after successful test */}
+
+## Tips
+
+- Test the connection every time you change server credentials, even for minor updates.
+- If your server uses a non-standard port, make sure your firewall allows inbound connections on that port.
+- The test connection feature is not available for Google Drive delivery; Google Drive uses OAuth authorization instead.
+- If you continue to see "Connection is incorrect" after verifying all fields, contact your server administrator to ensure the account has the proper permissions.
+
+## Related Articles
+
+- [How to Set Up FTP Delivery](/helpdesk/delivery-methods/ftp-setup)
+- [How to Set Up SFTP Delivery](/helpdesk/delivery-methods/sftp-setup)
+- [How to Edit an Existing Delivery Method](/helpdesk/delivery-methods/edit-delivery)
+- [Overview of All Delivery Integrations](/helpdesk/delivery-methods/integration-overview)

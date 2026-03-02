@@ -1,0 +1,83 @@
+---
+title: "How to Resend Failed or Past Emails in Better PDF Invoice"
+description: "Learn how to resend failed or canceled automated invoice emails from the email activity history in Better PDF Invoice."
+---
+
+# How to Resend Failed or Past Emails
+
+If an automated email failed to send or was canceled, you can resend it directly from the email activity history table. The resend feature re-triggers the email for the same order and event, using your current automation settings.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- A Professional or Ultimate plan (resending is not available on the Free plan)
+- Automation emails enabled with completed configuration
+- At least one email record in the activity history with a **Failed** or **Canceled** status
+
+## Steps
+
+### Step 1: Navigate to the email activity history
+
+In the Better PDF Invoice app, go to **Emails** and select the **Automation Emails** tab. Scroll down to the **Activity History** section and expand it by clicking the header.
+
+{/* screenshot: Activity History section expanded showing email records */}
+
+### Step 2: Identify failed or canceled emails
+
+Look for rows in the history table with a red **Failed** badge or a yellow **Canceled** badge in the Status column. Hover over the badge to see the reason for failure or cancellation.
+
+{/* screenshot: Failed and Canceled status badges with tooltip showing error details */}
+
+### Step 3: Click the Resend button
+
+In the **Actions** column of the row you want to resend, click the **Resend** button (send icon). The button shows a loading spinner while the email is being resent.
+
+{/* screenshot: Resend button (send icon) in the Actions column of a failed email row */}
+
+### Step 4: Wait for the resend to complete
+
+The resend button displays a loading state while the app processes the request. The email is sent synchronously, so the result is available immediately.
+
+{/* screenshot: Resend button in loading state */}
+
+### Step 5: Confirm the resend result
+
+After the resend completes:
+
+- **Success**: A success toast notification appears with the message confirming the email was resent. The table refreshes automatically and the row status updates.
+- **Failure**: An error toast notification appears with the failure message. The row status remains as Failed.
+
+{/* screenshot: Success toast notification after a successful resend */}
+
+### Step 6: Verify the updated status
+
+After the table refreshes, check the status badge for the row you resent. A successful resend updates the status to **Succeed** (green badge). If it failed again, the status remains **Failed**.
+
+{/* screenshot: Updated row showing Succeed status after a successful resend */}
+
+### Step 7: Investigate persistent failures
+
+If a resend continues to fail, hover over the **Failed** badge to read the error message. Common causes include:
+
+- Invalid or missing customer email address
+- Email service temporary errors
+- Template configuration issues
+
+Address the root cause before attempting to resend again.
+
+{/* screenshot: Failed badge tooltip showing a specific error message */}
+
+## Tips
+
+- The **Resend** button is disabled for emails with a **Succeed** status. You can only resend failed or canceled emails.
+- The **Resend** button is also disabled on the Free plan. Upgrade to Professional or Ultimate to use this feature.
+- Resending uses your current automation email settings (template, reply-to, BCC, etc.), not the settings that were active when the original email was sent.
+- The activity history table refreshes automatically after a resend, so you do not need to manually reload the page.
+- If you need to send an invoice for an order that is not in the history, use the manual send feature from the order detail page instead.
+
+## Related Articles
+
+- [Viewing Email Activity History](/helpdesk/email-automation/email-history)
+- [Setting Up Email Automation Rules](/helpdesk/email-automation/setup-automation)
+- [Sending a Test Email](/helpdesk/email-automation/test-email)
+- [Setting Up Email Sender and Reply-To](/helpdesk/email-automation/sender-config)

@@ -1,0 +1,101 @@
+---
+title: "How to Set Up FTP Delivery in Better PDF Invoice"
+description: "Learn how to configure an FTP delivery method to automatically send PDF invoices to your FTP server in the Better PDF Invoice app."
+---
+
+# How to Set Up FTP Delivery
+
+FTP delivery allows you to automatically export PDF invoices to a remote FTP server. This is useful for integrating with accounting systems, logistics providers, or any workflow that requires file-based invoice delivery.
+
+## Prerequisites
+
+- A paid plan (Professional, Ultimate, or Wholesale) in Better PDF Invoice
+- Access credentials for your FTP server (host name, port, username, password)
+- At least one PDF template configured in the app
+
+## Steps
+
+### Step 1: Navigate to Settings
+
+From the Better PDF Invoice dashboard, click **Settings** in the left sidebar menu, then select the **Delivery** tab.
+
+{/* screenshot: Settings page with Delivery tab selected */}
+
+### Step 2: Click Create Delivery
+
+Click the **Create delivery** button to start configuring a new delivery method.
+
+{/* screenshot: Delivery list page with Create delivery button highlighted */}
+
+### Step 3: Enter the Delivery Name
+
+In the **Name** field, enter a descriptive name for your delivery (e.g., "Daily FTP Export" or "Accounting Server Upload"). The default name is "Untitled delivery".
+
+{/* screenshot: General information section with Name field */}
+
+### Step 4: Select a PDF Attached Template
+
+From the **PDF attached template** dropdown, choose the invoice template you want to use for the exported PDF files. Only templates with the "Order" type are available.
+
+{/* screenshot: PDF attached template dropdown with template options */}
+
+### Step 5: Configure the PDF File Name
+
+In the **PDF file name** field, set the naming pattern for exported files. The default pattern is `order_{{order_number}}_{{time_stamp}}`. Click **Variables** to see all available variables you can use in the file name.
+
+{/* screenshot: PDF file name field with Variables link */}
+
+### Step 6: Select FTP as the Delivery Method
+
+In the **Delivery details** section, open the **Method** dropdown and select **FTP**.
+
+{/* screenshot: Method dropdown with FTP selected */}
+
+### Step 7: Enter the Host Name
+
+In the **Host name** field, enter your FTP server address (e.g., `216.3.128.12` or `ftp.yourserver.com`).
+
+{/* screenshot: Host name field with example placeholder */}
+
+### Step 8: Enter the Port
+
+In the **Port** field, enter your FTP server port. The default FTP port is `21`.
+
+{/* screenshot: Port field showing default value 21 */}
+
+### Step 9: Enter Your Username
+
+In the **Username** field, enter the username for your FTP server authentication (e.g., `root`).
+
+{/* screenshot: Username field */}
+
+### Step 10: Enter Your Password
+
+In the **Password** field, enter the password for your FTP account. The password is masked for security.
+
+{/* screenshot: Password field with masked input */}
+
+### Step 11: Enter the Directory Path
+
+In the **Directory path** field, specify the remote directory where PDF files should be uploaded (e.g., `/home/root/exports/daily`).
+
+{/* screenshot: Directory path field with example placeholder */}
+
+### Step 12: Save the Delivery
+
+Click the **Save** button in the top-right corner or at the bottom of the page to create your FTP delivery method.
+
+{/* screenshot: Save button highlighted */}
+
+## Tips
+
+- Use the **Test connection** button to verify your FTP credentials before saving. See [Testing your delivery connection](/helpdesk/delivery-methods/test-connection) for details.
+- Enable the delivery by clicking **Turn on** next to the Enable toggle to start automatic exports.
+- Use variables in the file name to ensure each exported PDF has a unique name and avoid overwriting files.
+
+## Related Articles
+
+- [How to Test Your Delivery Connection](/helpdesk/delivery-methods/test-connection)
+- [How to Set Up SFTP Delivery](/helpdesk/delivery-methods/sftp-setup)
+- [How to Edit an Existing Delivery Method](/helpdesk/delivery-methods/edit-delivery)
+- [Overview of All Delivery Integrations](/helpdesk/delivery-methods/integration-overview)

@@ -1,0 +1,96 @@
+---
+title: "How to Configure Email Templates in Better PDF Invoice"
+description: "Learn how to configure the PDF template and custom file name for automated invoice emails in the Better PDF Invoice app."
+---
+
+# How to Configure Email Templates
+
+The email automation settings include options to select which PDF template is attached to automated emails and to customize the PDF file name. These settings ensure your customers receive properly branded invoices.
+
+## Prerequisites
+
+- Better PDF Invoice app installed on your Shopify store
+- At least one order template created in the Templates section
+- Automation emails enabled (see [Setting Up Email Automation Rules](/docs/email-automation/setup-automation))
+
+## Steps
+
+### Step 1: Navigate to the Emails page
+
+In the Better PDF Invoice app, click **Emails** in the left navigation menu and select the **Automation Emails** tab in the left sidebar.
+
+{/* screenshot: Emails page with Automation Emails tab selected */}
+
+### Step 2: Set the custom PDF file name
+
+In the first card, find the **Custom PDF file name** field. This controls the name of the PDF file attached to automated emails. The default value is `Invoice_{{order.order_number}}`. You can type any custom name using variable placeholders.
+
+{/* screenshot: Custom PDF file name field with the default value and .pdf suffix */}
+
+### Step 3: Insert file name variables
+
+Click the **Variables** link action next to the "Custom PDF file name" label. A slide-out sheet opens showing all available variables you can insert into the file name, such as `{{ order.order_number }}`, `{{ order.name }}`, `{{ shop.name }}`, and more. Click a variable to append it to the current file name.
+
+{/* screenshot: Variables sheet showing available file name variables */}
+
+### Step 4: Select the PDF attached template
+
+Use the **PDF attached template** dropdown to choose which order template generates the PDF attachment. This dropdown lists all templates with the type "Order." Select the template you want to use for automated email attachments.
+
+{/* screenshot: PDF attached template dropdown showing available Order templates */}
+
+### Step 5: Configure the Email Notification tab templates (optional)
+
+If you also want to embed a download link in Shopify's built-in email notifications, click the **Email Notification** tab in the left sidebar. This section has separate template configurations.
+
+{/* screenshot: Email Notification tab in the left sidebar */}
+
+### Step 6: Choose the order email template
+
+Under the **Order Emails** heading in the Email Notification tab, use the **Choose print template** dropdown to select which Order template generates the PDF when customers click the download link.
+
+{/* screenshot: Order email template dropdown in the Email Notification settings */}
+
+### Step 7: Set the download link text for orders
+
+In the **Text** field below the order template dropdown, enter the text that appears as the clickable download link (e.g., "Download PDF version"). This text is shown to the customer in the Shopify notification email.
+
+{/* screenshot: Download link text field for order emails */}
+
+### Step 8: Choose the draft order email template
+
+Scroll down to the **Draft Order** section. Use the **Choose print template** dropdown to select which Draft Order template generates the PDF for draft order notification emails.
+
+{/* screenshot: Draft order email template dropdown in the Email Notification settings */}
+
+### Step 9: Set the download link text for draft orders
+
+In the **Text** field below the draft order template dropdown, enter the download link text (e.g., "Download Quote PDF").
+
+{/* screenshot: Download link text field for draft order emails */}
+
+### Step 10: Copy the generated HTML code
+
+After selecting templates and saving, the Email Notification tab generates an HTML code snippet for both orders and draft orders. Click the **Copy** button next to each code block to copy the snippet. You will paste this into your Shopify notification email templates.
+
+{/* screenshot: Generated HTML code block with the Copy button */}
+
+### Step 11: Save your changes
+
+Click **Save** in the save bar at the top of the page to save all template configuration changes.
+
+{/* screenshot: Save bar with Save and Discard buttons */}
+
+## Tips
+
+- The `.pdf` suffix is automatically appended to the custom file name -- do not include it in the field.
+- Variables in the file name (like `{{ order.order_number }}`) are replaced with actual values when the PDF is generated.
+- The Email Notification feature requires you to manually paste the generated HTML code into your Shopify notification templates. See the paste instructions on the Email Notification tab.
+- If no templates appear in the dropdown, make sure you have created at least one Order or Draft Order template in the Templates section.
+
+## Related Articles
+
+- [Setting Up Email Automation Rules](/docs/email-automation/setup-automation)
+- [Setting Up Email Sender and Reply-To](/docs/email-automation/sender-config)
+- [Sending a Test Email](/docs/email-automation/test-email)
+- [Viewing Email Activity History](/docs/email-automation/email-history)
