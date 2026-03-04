@@ -103,7 +103,7 @@ export default function CardGrid() {
             fontSize: '1.5rem',
             fontWeight: 700,
             color: 'var(--card-title)',
-            fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif",
+            fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif",
             margin: '0 0 1rem',
           }}>
             {category.heading}
@@ -138,7 +138,7 @@ export default function CardGrid() {
                     fontSize: '1rem',
                     fontWeight: 600,
                     color: 'var(--card-title)',
-                    fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif"
+                    fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif"
                   }}>
                     {section.title}
                   </h3>

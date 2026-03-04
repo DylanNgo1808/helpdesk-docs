@@ -91,7 +91,7 @@ export default function CardSection() {
               fontSize: '1rem',
               fontWeight: 600,
               color: 'var(--card-title)',
-              fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif"
+              fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif"
             }}>
               {card.title}
             </h3>

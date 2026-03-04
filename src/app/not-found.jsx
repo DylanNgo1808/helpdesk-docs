@@ -24,7 +24,7 @@ export default function NotFound() {
             margin: 0,
             lineHeight: 1,
             color: '#7EC8E3',
-            fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif"
+            fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif"
           }}
         >
           404
@@ -35,7 +35,7 @@ export default function NotFound() {
             fontWeight: 600,
             margin: '1rem 0 0.5rem',
             color: '#18181b',
-            fontFamily: "'Plus Jakarta Sans', 'Inter', sans-serif"
+            fontFamily: "'Inter', ui-sans-serif, system-ui, sans-serif"
           }}
         >
           Page Not Found
