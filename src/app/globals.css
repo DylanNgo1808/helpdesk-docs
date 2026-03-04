@@ -1,0 +1,213 @@
+/* Brand CSS Overrides for PDF Help Center */
+/* Brand Primary: #7EC8E3 (cyan) -> HSL(198, 64%, 70%) */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+/* ===== Light Mode ===== */
+:root {
+  --nextra-primary-hue: 198deg;
+  --nextra-primary-saturation: 64%;
+  --nextra-primary-lightness: 45%;
+  --nextra-bg: 255, 255, 255;
+}
+
+/* ===== Dark Mode ===== */
+.dark {
+  --nextra-primary-hue: 198deg;
+  --nextra-primary-saturation: 64%;
+  --nextra-primary-lightness: 55%;
+  --nextra-bg: 19, 20, 16;
+}
+
+/* ===== Fonts ===== */
+html {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+article h1, article h2, article h3, article h4 {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+}
+
+/* Navbar title */
+nav a[href="/"] {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+}
+
+/* ===== Logo Dark/Light Toggle ===== */
+.logo-dark {
+  display: none;
+}
+
+.dark .logo-light {
+  display: none;
+}
+
+.dark .logo-dark {
+  display: inline-block;
+}
+
+/* ===== Navbar Branding ===== */
+nav.nextra-nav-container,
+.nextra-nav-container {
+  border-bottom-color: #e6edf0;
+}
+
+.dark nav.nextra-nav-container,
+.dark .nextra-nav-container {
+  border-bottom-color: #212220;
+}
+
+/* ===== Sidebar ===== */
+.nextra-sidebar-container {
+  border-right-color: #e6edf0;
+}
+
+.dark .nextra-sidebar-container {
+  border-right-color: #212220;
+}
+
+/* ===== Content Typography ===== */
+article {
+  color: #18181b;
+}
+
+.dark article {
+  color: #e4e4e7;
+}
+
+article p,
+article li {
+  color: #5d6167;
+}
+
+.dark article p,
+.dark article li {
+  color: #a1a1aa;
+}
+
+/* ===== Links ===== */
+article a {
+  color: #5BB8DB;
+}
+
+article a:hover {
+  color: #7EC8E3;
+}
+
+.dark article a {
+  color: #7EC8E3;
+}
+
+.dark article a:hover {
+  color: #9dd5eb;
+}
+
+/* ===== Code Blocks ===== */
+article code {
+  border-color: #e6edf0;
+  background-color: #f5f8fa;
+}
+
+.dark article code {
+  border-color: #212220;
+  background-color: #1a1b18;
+}
+
+/* ===== Footer ===== */
+footer {
+  border-top-color: #e6edf0;
+}
+
+.dark footer {
+  border-top-color: #212220;
+}
+
+.dark footer p,
+.dark footer nav {
+  color: #a1a1aa;
+}
+
+footer a:hover {
+  color: #5BB8DB !important;
+}
+
+.dark footer a:hover {
+  color: #7EC8E3 !important;
+}
+
+/* ===== Banner ===== */
+.nextra-banner {
+  background: linear-gradient(135deg, #131410 0%, #1e3a4a 100%);
+  color: #E8F4FA;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.nextra-banner a {
+  color: #B1E346;
+  text-decoration: none;
+}
+
+.nextra-banner a:hover {
+  color: #c8f06e;
+  text-decoration: underline;
+}
+
+.dark .nextra-banner {
+  background: linear-gradient(135deg, #0a1820 0%, #1a3040 100%);
+}
+
+/* ===== Selection Color ===== */
+::selection {
+  background: rgba(126, 200, 227, 0.3);
+}
+
+/* ===== Scrollbar (subtle brand touch) ===== */
+::-webkit-scrollbar-thumb {
+  background-color: #7EC8E3;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: #5BB8DB;
+}
+
+/* ===== Card Grid (GitBook-style) ===== */
+:root {
+  --card-border: #e6edf0;
+  --card-bg: #ffffff;
+  --card-icon: #5BB8DB;
+  --card-title: #18181b;
+  --card-desc: #5d6167;
+}
+
+.dark {
+  --card-border: #212220;
+  --card-bg: #1a1b18;
+  --card-icon: #7EC8E3;
+  --card-title: #e4e4e7;
+  --card-desc: #a1a1aa;
+}
+
+.doc-card:hover {
+  border-color: #7EC8E3 !important;
+  box-shadow: 0 4px 16px rgba(126, 200, 227, 0.15);
+  transform: translateY(-2px);
+}
+
+.dark .doc-card:hover {
+  box-shadow: 0 4px 16px rgba(126, 200, 227, 0.1);
+}
+
+@media (max-width: 768px) {
+  .card-grid-3col {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card-grid-3col {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
