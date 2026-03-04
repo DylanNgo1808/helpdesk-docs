@@ -1,6 +1,7 @@
 import { Footer, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
+import { TocFeedback } from '../components/TocFeedback'
 import 'nextra-theme-docs/style.css'
 import './globals.css'
 
@@ -78,7 +79,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <Head>
-        <link rel="icon" href="/favicon.jpg" type="image/jpeg" />
+        <link rel="icon" href="/help/en/favicon.jpg" type="image/jpeg" />
       </Head>
       <body>
         <Layout
@@ -135,6 +136,9 @@ export default async function RootLayout({ children }) {
             </Footer>
           }
           sidebar={{ defaultMenuCollapseLevel: 1 }}
+          editLink={null}
+          feedback={{ content: null }}
+          toc={{ extraContent: <TocFeedback /> }}
           pageMap={pageMap}
         >
           {children}

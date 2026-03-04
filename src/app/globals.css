@@ -173,6 +173,51 @@ footer a:hover {
   background-color: #5BB8DB;
 }
 
+/* ===== Table of Contents ===== */
+/* Hide default TOC title */
+nav.nextra-toc > div > p {
+  display: none !important;
+}
+
+/* Active link — left accent bar */
+nav.nextra-toc ul li a[aria-selected="true"] {
+  color: #5BB8DB !important;
+  font-weight: 600 !important;
+  background: rgba(91, 184, 219, 0.08);
+  border-left: 3px solid #5BB8DB;
+  padding-left: 0.75rem !important;
+  border-radius: 0 6px 6px 0;
+}
+
+nav.nextra-toc ul li a {
+  font-size: 0.8125rem !important;
+  color: #5d6167 !important;
+  transition: color 0.15s, background 0.15s, border-left 0.15s;
+  border-left: 3px solid transparent;
+  padding-left: 0.75rem !important;
+}
+
+nav.nextra-toc ul li a:hover {
+  color: #5BB8DB !important;
+  background: rgba(91, 184, 219, 0.04);
+}
+
+.dark nav.nextra-toc ul li a {
+  color: #a1a1aa !important;
+}
+
+.dark nav.nextra-toc ul li a:hover {
+  color: #7EC8E3 !important;
+  background: rgba(126, 200, 227, 0.06);
+}
+
+.dark nav.nextra-toc ul li a[aria-selected="true"] {
+  color: #7EC8E3 !important;
+  font-weight: 600 !important;
+  background: rgba(126, 200, 227, 0.1);
+  border-left-color: #7EC8E3;
+}
+
 /* ===== Card Grid (GitBook-style) ===== */
 :root {
   --card-border: #e6edf0;

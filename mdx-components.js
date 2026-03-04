@@ -1,5 +1,4 @@
 import { useMDXComponents as getDocsMDXComponents } from 'nextra-theme-docs'
-import { Feedback } from './src/components/Feedback'
 import { CopyButton } from './src/components/CopyButton'
 
 const docsComponents = getDocsMDXComponents()
@@ -14,7 +13,6 @@ export const useMDXComponents = components => ({
         <>
           <CopyButton />
           {children}
-          <Feedback />
         </>
       )
     })
