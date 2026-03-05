@@ -1,5 +1,4 @@
 export default {
-  index: { display: 'hidden' },
   "browse-templates": "Browse Templates",
   "create-template": "Create a Template",
   "edit-general": "Edit General Settings",

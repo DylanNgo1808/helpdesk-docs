@@ -1,5 +1,4 @@
 export default {
-  index: { display: 'hidden' },
   "view-drafts": "Viewing Draft Orders",
   "draft-details": "Draft Order Details",
   "print-draft": "Printing a Draft Order",

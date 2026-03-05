@@ -1,5 +1,4 @@
 export default {
-  index: { display: 'hidden' },
   "store-details": "Store Details",
   "upload-logo": "Upload Logo",
   "email-sender": "Email Sender",

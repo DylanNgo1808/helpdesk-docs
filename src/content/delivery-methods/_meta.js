@@ -1,5 +1,4 @@
 export default {
-  index: { display: 'hidden' },
   "integration-overview": "Overview of Delivery Integrations",
   "ftp-setup": "Set Up FTP Delivery",
   "sftp-setup": "Set Up SFTP Delivery",
