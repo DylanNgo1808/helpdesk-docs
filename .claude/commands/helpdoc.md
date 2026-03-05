@@ -8,7 +8,7 @@ Extract: feature to document, article type (guide/reference/troubleshooting), ca
 
 ### Step 2: Explore the Codebase
 
-Search `~/pdf-invoice-firebase` (or the codebase specified) for:
+Search the app codebase for:
 - Controllers/routes handling the feature
 - Frontend pages/components for the feature UI
 - Services/helpers with business logic
