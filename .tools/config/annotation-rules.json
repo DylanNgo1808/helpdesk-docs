@@ -1,0 +1,116 @@
+{
+  "$schema": "annotation-rules-v1",
+  "description": "Decision rules for screenshot annotation intelligence. Used by ScreenCapture FromPlaceholders and Helpdesk Generate workflows.",
+
+  "decisionMatrix": {
+    "annotate": {
+      "description": "Draw red rect + arrow + step number badge on a specific element (number hidden if single step)",
+      "triggers": [
+        { "pattern": "click|press|tap", "reason": "User must find a clickable element" },
+        { "pattern": "select|choose|pick from", "reason": "User must identify a selection target" },
+        { "pattern": "toggle|switch|enable|disable", "reason": "User must find a toggle control" },
+        { "pattern": "enter|type|fill|input", "reason": "User must locate an input field" },
+        { "pattern": "check|uncheck|tick", "reason": "User must find a checkbox" },
+        { "pattern": "drag|drop|move", "reason": "User must identify draggable element" },
+        { "pattern": "highlighted|button|field|dropdown", "reason": "Description references specific UI element" }
+      ]
+    },
+    "plain": {
+      "description": "Full-page screenshot with gradient background, no annotation overlay",
+      "triggers": [
+        { "pattern": "review|verify|confirm|see|observe|notice", "reason": "User is observing, not interacting" },
+        { "pattern": "showing|displays|appears|overview|page with|full .* page", "reason": "Description is observational" },
+        { "pattern": "navigate to|open .* page|go to|land on", "reason": "Navigation result, page context shot" }
+      ]
+    },
+    "skip": {
+      "description": "No screenshot needed for this step",
+      "triggers": [
+        { "pattern": "wait for|loading|processing", "reason": "Transient state, not capturable" },
+        { "pattern": "repeat .* step|same as step|like step", "reason": "Duplicates a previous screenshot" },
+        { "pattern": "mentally|remember|note that", "reason": "Cognitive action, not visual" }
+      ]
+    }
+  },
+
+  "selectorInference": {
+    "description": "Priority chain for inferring CSS selectors from step text. Try each strategy in order; use first match.",
+    "priorityChain": [
+      {
+        "name": "bold_text_to_playwright",
+        "description": "Extract **bold text** from step body, convert to Playwright text selector",
+        "strategy": "Extract text between ** markers. Map to: button:has-text('{text}'), a:has-text('{text}'), or [role='option']:has-text('{text}') depending on action verb.",
+        "examples": [
+          { "step": "Click **Save**", "selector": "button:has-text('Save')" },
+          { "step": "Click **Templates** in the sidebar", "selector": "nav a:has-text('Templates')" },
+          { "step": "Select **Invoice** from the dropdown", "selector": ".Polaris-Listbox-Option:has-text('Invoice')" },
+          { "step": "Click the **More Actions** dropdown", "selector": "button:has-text('More Actions')" },
+          { "step": "Toggle **Send to customer only**", "selector": "[role='switch']:near(:text('Send to customer only'))" }
+        ]
+      },
+      {
+        "name": "polaris_component_pattern",
+        "description": "Map UI element type keywords to Polaris class selectors",
+        "mappings": {
+          "button": ".Polaris-Button:has-text('{text}')",
+          "primary button": ".Polaris-Button--primary",
+          "save button": ".Polaris-Frame-ContextualSaveBar .Polaris-Button--primary",
+          "cancel button": ".Polaris-Button:has-text('Cancel')",
+          "delete button": ".Polaris-Button--destructive",
+          "dropdown": ".Polaris-Select",
+          "text field": ".Polaris-TextField",
+          "checkbox": ".Polaris-Checkbox",
+          "toggle": "[role='switch']",
+          "modal": ".Polaris-Modal-Dialog",
+          "modal footer": ".Polaris-Modal-Footer",
+          "popover": ".Polaris-Popover",
+          "tab": ".Polaris-Tabs__Tab:has-text('{text}')",
+          "card": ".Polaris-Card",
+          "banner": ".Polaris-Banner",
+          "badge": ".Polaris-Badge",
+          "toast": ".Polaris-Frame-ToastManager",
+          "save bar": ".Polaris-Frame-ContextualSaveBar",
+          "table": ".Polaris-IndexTable",
+          "table row": ".Polaris-IndexTable__TableRow",
+          "navigation": ".Polaris-Navigation",
+          "nav item": ".Polaris-Navigation__Item:has-text('{text}')",
+          "page header": ".Polaris-Page-Header",
+          "pagination": ".Polaris-Pagination",
+          "upload": ".Polaris-DropZone",
+          "color picker": ".Polaris-ColorPicker",
+          "date picker": ".Polaris-DatePicker",
+          "search": ".Polaris-TextField input[placeholder*='Search']",
+          "filter": ".Polaris-IndexFilters"
+        }
+      },
+      {
+        "name": "semantic_pattern",
+        "description": "Map description keywords to broad semantic selectors",
+        "mappings": {
+          "sidebar": "nav, .Polaris-Navigation",
+          "back": ".Polaris-Page-Header__BackAction",
+          "close": "[aria-label='Close']",
+          "sort": ".Polaris-IndexFilters-SortButton",
+          "bulk action": ".Polaris-IndexTable__BulkActionsWrapper"
+        }
+      },
+      {
+        "name": "aria_fallback",
+        "description": "ARIA label selectors as last resort",
+        "pattern": "[aria-label*='{text}']"
+      }
+    ]
+  },
+
+  "densityLimits": {
+    "maxAnnotatedPerArticle": 8,
+    "preferredAnnotateRatio": 0.6,
+    "rules": [
+      "First step: prefer PLAIN (shows the starting page context)",
+      "Last step with Save/Submit/Send action: prefer ANNOTATE",
+      "Consecutive annotated steps targeting different elements: OK",
+      "Navigation steps ('go to X page'): PLAIN unless clicking a specific nav item",
+      "If annotate ratio exceeds 0.6, downgrade weakest observation-type steps to PLAIN"
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "$schema": "route-mapping-v1",
+  "description": "Maps helpdesk article categories and slugs to app routes for screenshot capture. Used by both Helpdesk Generate and ScreenCapture FromPlaceholders workflows.",
+
+  "categoryRoutes": {
+    "getting-started": "/",
+    "orders": "/orders",
+    "draft-orders": "/draftOrders",
+    "templates": "/templates",
+    "settings": "/settings",
+    "email-automation": "/automation_email",
+    "subscription": "/subscription",
+    "b2b": "/b2b",
+    "delivery-methods": "/settings",
+    "shopify-extensions": null,
+    "troubleshooting": null
+  },
+
+  "slugRoutes": {
+    "dashboard-overview": "/",
+    "install-app": null,
+    "initial-setup": "/",
+    "quick-start": "/",
+
+    "view-orders": "/orders",
+    "order-details": "/orders/view/:id",
+    "search-orders": "/orders",
+    "filter-orders": "/orders",
+    "print-order": "/orders/print/:id",
+    "download-order": "/orders/download",
+    "send-invoice": "/orders/view/:id",
+    "mass-print": "/orders/mass-print",
+    "mass-download": "/orders/mass-download",
+    "mass-send": "/orders/mass-send",
+    "combine-orders": "/orders/combine",
+    "combine-company": "/orders/combine",
+
+    "view-drafts": "/draftOrders",
+    "draft-details": "/draftOrders/view/:id",
+    "print-draft": "/draftOrders/print/:id",
+    "download-draft": "/draftOrders/download",
+    "send-draft": "/draftOrders/view/:id",
+    "mass-print-drafts": "/draftOrders/mass-print",
+
+    "browse-templates": "/templates",
+    "manage-templates": "/templates",
+    "create-template": "/templates/new",
+    "edit-general": "/templates/:id/edit",
+    "edit-content": "/templates/:id/edit",
+    "edit-design": "/templates/:id/edit",
+    "edit-theme": "/templates/:id/edit",
+    "preview-template": "/templates/:id/edit",
+
+    "setup-automation": "/automation_email",
+    "email-templates": "/automation_email",
+    "email-history": "/automation_email",
+    "sender-config": "/automation_email",
+    "resend-email": "/automation_email",
+    "test-email": "/automation_email",
+
+    "store-details": "/settings",
+    "email-sender": "/settings",
+    "upload-logo": "/settings",
+    "theme-selection": "/settings",
+    "language-settings": "/settings",
+    "payment-terms": "/settings",
+
+    "ftp-setup": "/settings/deliveries/create",
+    "sftp-setup": "/settings/deliveries/create",
+    "edit-delivery": "/settings/deliveries/update/:id",
+    "delete-delivery": "/settings/deliveries/update/:id",
+    "test-connection": "/settings/deliveries/update/:id",
+    "integration-overview": "/settings",
+
+    "subscription-overview": "/subscription",
+    "upgrade-plan": "/subscription",
+    "cancel-subscription": "/subscription",
+    "discount-codes": "/subscription",
+
+    "company-list": "/b2b",
+    "company-details": "/b2b/:id",
+    "company-orders": "/b2b/:id",
+    "b2b-statements": "/b2b/:id",
+    "wholesale-orders": "/b2b",
+
+    "common-issues": null,
+    "order-list-actions": null,
+    "order-page-actions": null,
+    "draft-order-actions": null,
+    "pos-extension": null
+  },
+
+  "navigationSteps": {
+    "/": [{ "keywords": ["Dashboard", "Home"] }],
+    "/orders": [{ "keywords": ["Orders"] }],
+    "/draftOrders": [{ "keywords": ["Draft Orders", "Draft orders"] }],
+    "/templates": [{ "keywords": ["Templates"] }],
+    "/automation_email": [{ "keywords": ["Automation Emails", "Email Automation", "Emails"] }],
+    "/subscription": [{ "keywords": ["Subscription"] }],
+    "/settings": [{ "keywords": ["Settings"] }],
+    "/b2b": [{ "keywords": ["B2B Purchases", "B2B"] }]
+  }
+}

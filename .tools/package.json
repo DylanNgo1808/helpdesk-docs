@@ -1,0 +1,10 @@
+{
+  "name": "screencapture-tools",
+  "version": "1.0.0",
+  "description": "ScreenCapture skill tools — Playwright browser control + Sharp annotation",
+  "type": "commonjs",
+  "dependencies": {
+    "playwright": "^1.58.0",
+    "sharp": "^0.33.0"
+  }
+}
