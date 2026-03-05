@@ -17,7 +17,7 @@ export const metadata = {
     title: 'Avada PDF Invoice Help Center',
     description:
       'Get help with Avada PDF Invoice for Shopify. Browse guides on settings, templates, orders, email automation, and more.',
-    url: 'https://invoice.avada.io/help/en',
+    url: 'https://invoice.avada.io',
     siteName: 'Avada PDF Invoice Help Center',
     images: [
       {
@@ -44,7 +44,7 @@ export default async function RootLayout({ children }) {
     <Navbar
       logo={
         <img
-          src="/help/en/images/pdf-invoice-logo.avif"
+          src="/images/pdf-invoice-logo.avif"
           alt="Avada PDF Invoice"
           height={40}
           style={{ height: 40, width: 'auto' }}
@@ -79,7 +79,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
       <Head>
-        <link rel="icon" href="/help/en/favicon.jpg" type="image/jpeg" />
+        <link rel="icon" href="/favicon.jpg" type="image/jpeg" />
       </Head>
       <body>
         <Layout

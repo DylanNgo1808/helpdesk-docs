@@ -8,6 +8,5 @@ const withNextra = nextra({
 })
 
 export default withNextra({
-  basePath: '/help/en',
   reactStrictMode: true
 })
