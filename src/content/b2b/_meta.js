@@ -1,4 +1,5 @@
 export default {
+  index: { display: 'hidden' },
   "company-list": "Manage B2B Companies",
   "company-details": "View Company Details",
   "company-orders": "View and Manage Company Orders",

@@ -1,4 +1,5 @@
 export default {
+  index: { display: 'hidden' },
   "view-orders": "View Orders",
   "filter-orders": "Filter Orders",
   "search-orders": "Search Orders",

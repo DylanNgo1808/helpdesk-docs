@@ -1,4 +1,5 @@
 export default {
+  index: { display: 'hidden' },
   "subscription-overview": "Understand Your Subscription",
   "upgrade-plan": "Upgrade to a Higher Plan",
   "discount-codes": "Apply Discount Codes",
