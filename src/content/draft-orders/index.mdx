@@ -3,18 +3,20 @@ title: "Draft Orders"
 description: "Generate, print, download, and send PDF invoices for your Shopify draft orders."
 ---
 
+import SectionCards from '@/components/SectionCards'
+
 # Draft Orders
 
 Work with PDF invoices for your Shopify draft orders. This section explains how to view draft orders, access their details, and print, download, or email draft invoices to your customers.
 
-## Guides
-
-- [Viewing Draft Orders](/docs/draft-orders/view-drafts) — Browse and review your Shopify draft orders
-- [Draft Order Details](/docs/draft-orders/draft-details) — Inspect line items and customer info for drafts
-- [Printing a Draft Order](/docs/draft-orders/print-draft) — Print a PDF invoice for a single draft
-- [Printing Multiple Draft Orders](/docs/draft-orders/mass-print-drafts) — Print several draft invoices in one batch
-- [Downloading Draft Orders as PDF](/docs/draft-orders/download-draft) — Save draft order invoices as PDF files
-- [Sending a Draft Order Invoice](/docs/draft-orders/send-draft) — Email a draft order invoice to the customer
+<SectionCards cards={[
+  { title: "Viewing Draft Orders", description: "Browse and manage all your Shopify draft orders.", href: "/docs/draft-orders/view-drafts" },
+  { title: "Draft Order Details", description: "View full details and invoice for a draft order.", href: "/docs/draft-orders/draft-details" },
+  { title: "Printing a Draft Order", description: "Print a single draft order invoice.", href: "/docs/draft-orders/print-draft" },
+  { title: "Printing Multiple Drafts", description: "Bulk print invoices for multiple draft orders.", href: "/docs/draft-orders/mass-print-drafts" },
+  { title: "Downloading as PDF", description: "Download draft order invoices as PDF files.", href: "/docs/draft-orders/download-draft" },
+  { title: "Sending a Draft Invoice", description: "Email a draft order invoice to the customer.", href: "/docs/draft-orders/send-draft" },
+]} />
 
 ---
 

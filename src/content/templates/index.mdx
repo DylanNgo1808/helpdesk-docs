@@ -3,20 +3,22 @@ title: "Templates"
 description: "Browse, create, and customize PDF invoice templates with themes, content fields, and custom CSS."
 ---
 
+import SectionCards from '@/components/SectionCards'
+
 # Templates
 
 Design invoices that reflect your brand. This section shows you how to browse available templates, create your own, and fine-tune every detail from layout and colors to content fields and custom CSS.
 
-## Guides
-
-- [Browse Templates](/docs/templates/browse-templates) — Explore the built-in template library
-- [Create a Template](/docs/templates/create-template) — Start a new template from scratch
-- [Edit General Settings](/docs/templates/edit-general) — Adjust template name, format, and basic options
-- [Customize Theme](/docs/templates/edit-theme) — Change colors, fonts, and visual styling
-- [Edit Content & Fields](/docs/templates/edit-content) — Choose which fields and sections appear on invoices
-- [Edit Design & CSS](/docs/templates/edit-design) — Apply custom CSS for advanced layout control
-- [Preview & Test](/docs/templates/preview-template) — Preview your template before using it
-- [Manage Templates](/docs/templates/manage-templates) — Duplicate, rename, delete, or set a default template
+<SectionCards cards={[
+  { title: "Browse Templates", description: "Explore available invoice template designs and layouts.", href: "/docs/templates/browse-templates" },
+  { title: "Create a Template", description: "Start a new template from scratch or a preset.", href: "/docs/templates/create-template" },
+  { title: "Edit General Settings", description: "Configure template name, type, and basic options.", href: "/docs/templates/edit-general" },
+  { title: "Customize Theme", description: "Adjust colors, fonts, and visual styling.", href: "/docs/templates/edit-theme" },
+  { title: "Edit Content & Fields", description: "Add or remove data fields shown on the invoice.", href: "/docs/templates/edit-content" },
+  { title: "Edit Design & CSS", description: "Fine-tune layout with custom CSS and design tools.", href: "/docs/templates/edit-design" },
+  { title: "Preview & Test", description: "Preview your template with sample order data.", href: "/docs/templates/preview-template" },
+  { title: "Manage Templates", description: "Set defaults, duplicate, or delete templates.", href: "/docs/templates/manage-templates" },
+]} />
 
 ---
 

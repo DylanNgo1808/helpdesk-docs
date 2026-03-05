@@ -3,18 +3,20 @@ title: "Settings"
 description: "Configure your store details, logo, email sender, language, payment terms, and theme in Avada PDF Invoice."
 ---
 
+import SectionCards from '@/components/SectionCards'
+
 # Settings
 
 Customize Avada PDF Invoice to match your brand and business needs. This section covers every configurable option, from store details and logo to language preferences and payment terms.
 
-## Guides
-
-- [Store Details](/docs/settings/store-details) — Set your store name, address, and contact info
-- [Upload Logo](/docs/settings/upload-logo) — Add your brand logo to invoices
-- [Email Sender](/docs/settings/email-sender) — Configure the sender name and email address
-- [Language Settings](/docs/settings/language-settings) — Choose the default language for your invoices
-- [Payment Terms](/docs/settings/payment-terms) — Define payment terms displayed on invoices
-- [Theme Selection](/docs/settings/theme-selection) — Pick a visual theme for your invoice layout
+<SectionCards cards={[
+  { title: "Store Details", description: "Set your store name, address, and business information.", href: "/docs/settings/store-details" },
+  { title: "Upload Logo", description: "Add your brand logo to appear on all invoices.", href: "/docs/settings/upload-logo" },
+  { title: "Email Sender", description: "Configure the sender name and email for outgoing messages.", href: "/docs/settings/email-sender" },
+  { title: "Language Settings", description: "Set the default language for your invoice documents.", href: "/docs/settings/language-settings" },
+  { title: "Payment Terms", description: "Define payment terms displayed on your invoices.", href: "/docs/settings/payment-terms" },
+  { title: "Theme Selection", description: "Choose a global theme for all your invoice templates.", href: "/docs/settings/theme-selection" },
+]} />
 
 ---
 

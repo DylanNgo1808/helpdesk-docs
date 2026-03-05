@@ -3,18 +3,20 @@ title: "Email Automation"
 description: "Set up automated invoice emails with custom templates, sender configuration, and delivery tracking."
 ---
 
+import SectionCards from '@/components/SectionCards'
+
 # Email Automation
 
 Automate your invoice delivery so customers receive PDF invoices without any manual work. This section covers setting up automation rules, customizing email templates, configuring sender details, and tracking delivery history.
 
-## Guides
-
-- [Setting Up Email Automation](/docs/email-automation/setup-automation) — Enable and configure automatic invoice emails
-- [Configuring Email Templates](/docs/email-automation/email-templates) — Customize the subject, body, and layout of emails
-- [Email Sender and Reply-To](/docs/email-automation/sender-config) — Set the sender name, address, and reply-to field
-- [Sending a Test Email](/docs/email-automation/test-email) — Send a test email to verify your setup
-- [Viewing Email Activity History](/docs/email-automation/email-history) — Track sent emails and their delivery status
-- [Resending Emails](/docs/email-automation/resend-email) — Resend a previously sent invoice email
+<SectionCards cards={[
+  { title: "Setting Up Automation", description: "Create rules to send invoices automatically.", href: "/docs/email-automation/setup-automation" },
+  { title: "Email Templates", description: "Customize the email body and subject line.", href: "/docs/email-automation/email-templates" },
+  { title: "Sender and Reply-To", description: "Configure who emails are sent from.", href: "/docs/email-automation/sender-config" },
+  { title: "Sending a Test Email", description: "Send a test to verify your email setup.", href: "/docs/email-automation/test-email" },
+  { title: "Email Activity History", description: "Track sent emails and delivery status.", href: "/docs/email-automation/email-history" },
+  { title: "Resending Emails", description: "Resend a previously sent invoice email.", href: "/docs/email-automation/resend-email" },
+]} />
 
 ---
 

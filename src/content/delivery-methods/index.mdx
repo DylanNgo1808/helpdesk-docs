@@ -3,18 +3,20 @@ title: "Delivery Methods"
 description: "Configure FTP, SFTP, and other integrations to automatically deliver PDF invoices to external systems."
 ---
 
+import SectionCards from '@/components/SectionCards'
+
 # Delivery Methods
 
 Set up automated delivery integrations to send your PDF invoices directly to external systems. This section covers everything from initial configuration to testing and managing your delivery connections.
 
-## Guides
-
-- [Overview of Delivery Integrations](/docs/delivery-methods/integration-overview) — Learn about available delivery integrations and how they work
-- [Set Up FTP Delivery](/docs/delivery-methods/ftp-setup) — Configure FTP to deliver invoices to your server
-- [Set Up SFTP Delivery](/docs/delivery-methods/sftp-setup) — Configure secure SFTP delivery for your invoices
-- [Test Your Delivery Connection](/docs/delivery-methods/test-connection) — Verify that your delivery connection is working properly
-- [Edit a Delivery Method](/docs/delivery-methods/edit-delivery) — Update settings on an existing delivery method
-- [Remove a Delivery Method](/docs/delivery-methods/delete-delivery) — Delete a delivery method you no longer need
+<SectionCards cards={[
+  { title: "Integration Overview", description: "See all available delivery integrations at a glance.", href: "/docs/delivery-methods/integration-overview" },
+  { title: "Set Up FTP Delivery", description: "Connect to an FTP server for automatic delivery.", href: "/docs/delivery-methods/ftp-setup" },
+  { title: "Set Up SFTP Delivery", description: "Connect to an SFTP server for secure delivery.", href: "/docs/delivery-methods/sftp-setup" },
+  { title: "Test Your Connection", description: "Verify your delivery method is working correctly.", href: "/docs/delivery-methods/test-connection" },
+  { title: "Edit a Delivery Method", description: "Update credentials or settings for a delivery method.", href: "/docs/delivery-methods/edit-delivery" },
+  { title: "Remove a Delivery Method", description: "Delete a delivery integration you no longer need.", href: "/docs/delivery-methods/delete-delivery" },
+]} />
 
 ---
 

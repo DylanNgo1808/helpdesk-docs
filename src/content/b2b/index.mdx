@@ -3,17 +3,19 @@ title: "B2B Features"
 description: "Manage B2B companies, view company orders, handle wholesale billing, and generate B2B statements."
 ---
 
+import SectionCards from '@/components/SectionCards'
+
 # B2B Features
 
 Manage your business-to-business operations all in one place. This section walks you through managing companies, tracking orders, handling wholesale billing, and generating statements for your B2B customers.
 
-## Guides
-
-- [Manage B2B Companies](/docs/b2b/company-list) — View, add, and organize your B2B company list
-- [View Company Details](/docs/b2b/company-details) — Access detailed information for a specific company
-- [View and Manage Company Orders](/docs/b2b/company-orders) — Track and manage orders placed by B2B companies
-- [Manage Wholesale Orders](/docs/b2b/wholesale-orders) — Handle wholesale order workflows and bulk billing
-- [Create B2B Statements](/docs/b2b/b2b-statements) — Generate account statements for your B2B customers
+<SectionCards cards={[
+  { title: "Manage B2B Companies", description: "View and organize your B2B company list.", href: "/docs/b2b/company-list" },
+  { title: "View Company Details", description: "See contact info, tax settings, and history.", href: "/docs/b2b/company-details" },
+  { title: "Company Orders", description: "View and manage orders linked to a company.", href: "/docs/b2b/company-orders" },
+  { title: "Wholesale Orders", description: "Handle wholesale pricing and bulk order invoices.", href: "/docs/b2b/wholesale-orders" },
+  { title: "B2B Statements", description: "Generate account statements for B2B customers.", href: "/docs/b2b/b2b-statements" },
+]} />
 
 ---
 

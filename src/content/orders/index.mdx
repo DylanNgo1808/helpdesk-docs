@@ -3,24 +3,26 @@ title: "Orders"
 description: "View, filter, search, print, download, and send PDF invoices for your Shopify orders."
 ---
 
+import SectionCards from '@/components/SectionCards'
+
 # Orders
 
 Manage PDF invoices for all your Shopify orders in one place. This section covers everything from viewing and filtering orders to printing, downloading, and emailing invoices individually or in bulk.
 
-## Guides
-
-- [View Orders](/docs/orders/view-orders) — Browse your full list of Shopify orders
-- [Filter Orders](/docs/orders/filter-orders) — Narrow orders by date, status, or other criteria
-- [Search Orders](/docs/orders/search-orders) — Find specific orders quickly by keyword or number
-- [Order Details](/docs/orders/order-details) — View line items, totals, and customer information
-- [Print an Invoice](/docs/orders/print-order) — Print a PDF invoice for a single order
-- [Bulk Print Invoices](/docs/orders/mass-print) — Print invoices for multiple orders at once
-- [Download as PDF](/docs/orders/download-order) — Save an individual invoice as a PDF file
-- [Bulk Download](/docs/orders/mass-download) — Download multiple invoices in a single action
-- [Send Invoice by Email](/docs/orders/send-invoice) — Email a PDF invoice to the customer
-- [Bulk Send Invoices](/docs/orders/mass-send) — Send invoices to multiple customers at once
-- [Combine Orders](/docs/orders/combine-orders) — Merge multiple orders into one combined invoice
-- [Combine Company Orders](/docs/orders/combine-company) — Group and combine orders by company name
+<SectionCards cards={[
+  { title: "View Orders", description: "See all Shopify orders synced to the app.", href: "/docs/orders/view-orders" },
+  { title: "Filter Orders", description: "Narrow orders by date, status, or fulfillment.", href: "/docs/orders/filter-orders" },
+  { title: "Search Orders", description: "Find specific orders by name, number, or email.", href: "/docs/orders/search-orders" },
+  { title: "Order Details", description: "View full invoice details for a specific order.", href: "/docs/orders/order-details" },
+  { title: "Print an Invoice", description: "Print a single order invoice from the app.", href: "/docs/orders/print-order" },
+  { title: "Bulk Print Invoices", description: "Print multiple invoices at once in bulk.", href: "/docs/orders/mass-print" },
+  { title: "Download as PDF", description: "Download an individual order invoice as PDF.", href: "/docs/orders/download-order" },
+  { title: "Bulk Download", description: "Download multiple invoices as a ZIP archive.", href: "/docs/orders/mass-download" },
+  { title: "Send Invoice by Email", description: "Email an invoice directly to the customer.", href: "/docs/orders/send-invoice" },
+  { title: "Bulk Send Invoices", description: "Send invoices to multiple customers at once.", href: "/docs/orders/mass-send" },
+  { title: "Combine Orders", description: "Merge multiple orders into a single invoice.", href: "/docs/orders/combine-orders" },
+  { title: "Combine Company Orders", description: "Consolidate orders by company for B2B billing.", href: "/docs/orders/combine-company" },
+]} />
 
 ---
 

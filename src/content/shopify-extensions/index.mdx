@@ -3,16 +3,18 @@ title: "Shopify Extensions"
 description: "Use Avada PDF Invoice actions directly from Shopify Admin order pages, bulk actions, and POS."
 ---
 
+import SectionCards from '@/components/SectionCards'
+
 # Shopify Extensions
 
 Access Avada PDF Invoice features right from your Shopify Admin. This section shows you how to use invoice actions on individual orders, in bulk, from draft orders, and at your point of sale.
 
-## Guides
-
-- [Order Page Actions](/docs/shopify-extensions/order-page-actions) — Use PDF invoice actions from a single order page
-- [Order List Bulk Actions](/docs/shopify-extensions/order-list-actions) — Run invoice actions on multiple orders at once
-- [Draft Order Actions](/docs/shopify-extensions/draft-order-actions) — Generate invoices for draft orders in Shopify
-- [POS Extension](/docs/shopify-extensions/pos-extension) — Use PDF invoice features at your point of sale
+<SectionCards cards={[
+  { title: "Order Page Actions", description: "Print or download invoices from an order page.", href: "/docs/shopify-extensions/order-page-actions" },
+  { title: "Order List Bulk Actions", description: "Use bulk actions on the Shopify orders list.", href: "/docs/shopify-extensions/order-list-actions" },
+  { title: "Draft Order Actions", description: "Access invoice actions from draft order pages.", href: "/docs/shopify-extensions/draft-order-actions" },
+  { title: "POS Extension", description: "Print invoices directly from Shopify POS.", href: "/docs/shopify-extensions/pos-extension" },
+]} />
 
 ---
 

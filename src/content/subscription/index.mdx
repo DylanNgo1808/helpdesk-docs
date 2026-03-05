@@ -3,16 +3,18 @@ title: "Subscription"
 description: "Understand your plan, upgrade or downgrade, apply discount codes, and manage your subscription."
 ---
 
+import SectionCards from '@/components/SectionCards'
+
 # Subscription
 
 Stay on top of your subscription and billing. This section explains how to view your current plan, upgrade when you need more features, apply discount codes, and cancel if needed.
 
-## Guides
-
-- [Understand Your Subscription](/docs/subscription/subscription-overview) — Review your current plan details and usage limits
-- [Upgrade to a Higher Plan](/docs/subscription/upgrade-plan) — Move to a plan with more features and capacity
-- [Apply Discount Codes](/docs/subscription/discount-codes) — Redeem a discount code on your subscription
-- [Cancel Your Subscription](/docs/subscription/cancel-subscription) — Steps to cancel your plan and what to expect
+<SectionCards cards={[
+  { title: "Understand Your Plan", description: "See what's included in your current subscription.", href: "/docs/subscription/subscription-overview" },
+  { title: "Upgrade Your Plan", description: "Move to a higher plan for more features.", href: "/docs/subscription/upgrade-plan" },
+  { title: "Apply Discount Codes", description: "Redeem a promo code on your subscription.", href: "/docs/subscription/discount-codes" },
+  { title: "Cancel Subscription", description: "Cancel your plan and understand what happens next.", href: "/docs/subscription/cancel-subscription" },
+]} />
 
 ---
 
