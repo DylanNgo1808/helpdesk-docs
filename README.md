@@ -66,6 +66,14 @@ pdf-help-docs/
     helpdoc.md            # /helpdoc — generate help articles
     screenshot.md         # /screenshot — capture annotated screenshots
     fill-screenshots.md   # /fill-screenshots — batch-fill placeholders
+  skills/                 # Claude Code skills (installable)
+    Helpdesk/             # Article generation skill
+      SKILL.md            # Skill definition & routing
+      Templates/          # MDX article templates (Guide, Reference, Troubleshooting)
+      Workflows/          # Generate, FromMR, Review, Organize
+    ScreenCapture/        # Screenshot & annotation skill
+      SKILL.md            # Skill definition & routing
+      Workflows/          # Capture, CaptureFlow, FromPlaceholders
 ```
 
 ---
@@ -161,6 +169,25 @@ node .tools/annotate.js output.png '{"selector":".Polaris-Button","position":"au
 
 ## Claude Code Skills
 
+This project includes two layers of Claude Code integration:
+
+1. **Slash commands** (`.claude/commands/`) — project-scoped, work automatically when you open the project in Claude Code
+2. **Skills** (`skills/`) — reusable skill definitions you can install globally for use across projects
+
+### Installing Skills (optional)
+
+To install the skills globally so they work in any project:
+
+```bash
+# Copy skills to your Claude Code skills directory
+cp -r skills/Helpdesk ~/.claude/skills/
+cp -r skills/ScreenCapture ~/.claude/skills/
+```
+
+After installation, Claude Code will automatically route requests like "write a help guide for X" or "capture a screenshot of Y" to the appropriate skill and workflow.
+
+### Slash Commands
+
 These slash commands are available in Claude Code when working in this project.
 
 ### /helpdoc — Generate a help article
@@ -212,6 +239,29 @@ Finds all `{/* screenshot: ... */}` placeholders in MDX files and captures them 
 3. Infers selectors and annotation decisions from step text
 4. Captures each screenshot (annotated, plain, or skip)
 5. Replaces placeholders with `![alt](/images/slug/step-N.png)` tags
+
+### Skill: Helpdesk
+
+The Helpdesk skill provides structured workflows for documentation:
+
+| Workflow | Trigger | What it does |
+|----------|---------|--------------|
+| **Generate** | "write guide for X" | Explores codebase, generates MDX article with screenshot placeholders |
+| **FromMR** | "document this PR" | Reads a PR/MR diff, generates articles for user-facing changes |
+| **Review** | "review docs" | Scans articles for missing screenshots, validates content |
+| **Organize** | "organize help center" | Audits structure, finds orphaned articles, proposes reorganization |
+
+**Templates included:** Guide, Reference, Troubleshooting, and an ExampleGuide showing a completed article.
+
+### Skill: ScreenCapture
+
+The ScreenCapture skill provides structured workflows for screenshots:
+
+| Workflow | Trigger | What it does |
+|----------|---------|--------------|
+| **Capture** | "screenshot the orders page" | Single annotated screenshot |
+| **CaptureFlow** | "capture the invoice flow" | Multi-step walkthrough with numbered badges |
+| **FromPlaceholders** | "fill screenshots" | Batch-captures all `{/* screenshot: ... */}` placeholders in MDX files |
 
 ---
 

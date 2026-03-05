@@ -1,0 +1,73 @@
+---
+title: "{{TITLE}}"
+description: "{{DESCRIPTION}}"
+---
+
+import { Steps, Callout, Cards } from 'nextra/components'
+
+# {{TITLE}}
+
+{{INTRO_PARAGRAPH}}
+
+<Callout type="info">
+  **Prerequisites:** {{PREREQUISITES}}
+</Callout>
+
+## Overview
+
+{{OVERVIEW_PARAGRAPH}}
+
+## Steps
+
+<Steps>
+
+### {{STEP_1_TITLE}}
+
+{{STEP_1_DESCRIPTION}}
+
+{/* screenshot: {{STEP_1_SCREENSHOT_DESCRIPTION}} | page: {{APP_PAGE_PATH}} | element: {{CSS_SELECTOR}} */}
+![{{STEP_1_SCREENSHOT_ALT}}](/images/{{ARTICLE_SLUG}}/step-1.png)
+
+### {{STEP_2_TITLE}}
+
+{{STEP_2_DESCRIPTION}}
+
+{/* screenshot: {{STEP_2_SCREENSHOT_DESCRIPTION}} | page: {{APP_PAGE_PATH}} | element: {{CSS_SELECTOR}} */}
+![{{STEP_2_SCREENSHOT_ALT}}](/images/{{ARTICLE_SLUG}}/step-2.png)
+
+### {{STEP_3_TITLE}}
+
+{{STEP_3_DESCRIPTION}}
+
+{/* screenshot: {{STEP_3_SCREENSHOT_DESCRIPTION}} | page: {{APP_PAGE_PATH}} | element: {{CSS_SELECTOR}} */}
+![{{STEP_3_SCREENSHOT_ALT}}](/images/{{ARTICLE_SLUG}}/step-3.png)
+
+</Steps>
+
+<Callout type="warning">
+  {{TIP_OR_WARNING}}
+</Callout>
+
+## What's Next
+
+<Cards>
+  <Cards.Card
+    title="{{RELATED_1_TITLE}}"
+    href="{{RELATED_1_HREF}}"
+    arrow
+  />
+  <Cards.Card
+    title="{{RELATED_2_TITLE}}"
+    href="{{RELATED_2_HREF}}"
+    arrow
+  />
+  <Cards.Card
+    title="{{RELATED_3_TITLE}}"
+    href="{{RELATED_3_HREF}}"
+    arrow
+  />
+</Cards>
+
+---
+
+*Was this article helpful? [Let us know]({{FEEDBACK_URL}}).*

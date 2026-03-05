@@ -1,0 +1,116 @@
+---
+title: "{{TITLE}}"
+description: "{{DESCRIPTION}}"
+---
+
+import { Callout, Cards, Tabs, Steps } from 'nextra/components'
+
+# {{TITLE}}
+
+{{INTRO_PARAGRAPH}}
+
+<Callout type="error">
+  **Symptom:** {{SYMPTOM_DESCRIPTION}}
+</Callout>
+
+## Quick Fix
+
+<Steps>
+
+### {{QUICK_FIX_STEP_1}}
+
+{{QUICK_FIX_STEP_1_DESCRIPTION}}
+
+### {{QUICK_FIX_STEP_2}}
+
+{{QUICK_FIX_STEP_2_DESCRIPTION}}
+
+</Steps>
+
+## Causes & Solutions
+
+<Tabs items={['{{CAUSE_1_LABEL}}', '{{CAUSE_2_LABEL}}', '{{CAUSE_3_LABEL}}']}>
+  <Tabs.Tab>
+    ### {{CAUSE_1_TITLE}}
+
+    **Why this happens:** {{CAUSE_1_EXPLANATION}}
+
+    **How to fix it:**
+
+    <Steps>
+
+    ### {{CAUSE_1_FIX_STEP_1}}
+
+    {{CAUSE_1_FIX_STEP_1_DESCRIPTION}}
+
+    {/* screenshot: {{CAUSE_1_SCREENSHOT_DESCRIPTION}} | page: {{APP_PAGE_PATH}} | element: {{CSS_SELECTOR}} */}
+    ![{{CAUSE_1_SCREENSHOT_ALT}}](/images/{{ARTICLE_SLUG}}/cause-1-fix.png)
+
+    ### {{CAUSE_1_FIX_STEP_2}}
+
+    {{CAUSE_1_FIX_STEP_2_DESCRIPTION}}
+
+    </Steps>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    ### {{CAUSE_2_TITLE}}
+
+    **Why this happens:** {{CAUSE_2_EXPLANATION}}
+
+    **How to fix it:**
+
+    <Steps>
+
+    ### {{CAUSE_2_FIX_STEP_1}}
+
+    {{CAUSE_2_FIX_STEP_1_DESCRIPTION}}
+
+    ### {{CAUSE_2_FIX_STEP_2}}
+
+    {{CAUSE_2_FIX_STEP_2_DESCRIPTION}}
+
+    </Steps>
+  </Tabs.Tab>
+  <Tabs.Tab>
+    ### {{CAUSE_3_TITLE}}
+
+    **Why this happens:** {{CAUSE_3_EXPLANATION}}
+
+    **How to fix it:**
+
+    <Steps>
+
+    ### {{CAUSE_3_FIX_STEP_1}}
+
+    {{CAUSE_3_FIX_STEP_1_DESCRIPTION}}
+
+    ### {{CAUSE_3_FIX_STEP_2}}
+
+    {{CAUSE_3_FIX_STEP_2_DESCRIPTION}}
+
+    </Steps>
+  </Tabs.Tab>
+</Tabs>
+
+<Callout type="warning">
+  **Still not working?** {{ESCALATION_INSTRUCTIONS}}
+</Callout>
+
+## Related
+
+<Cards>
+  <Cards.Card
+    title="{{RELATED_1_TITLE}}"
+    href="{{RELATED_1_HREF}}"
+    arrow
+  />
+  <Cards.Card
+    title="{{RELATED_2_TITLE}}"
+    href="{{RELATED_2_HREF}}"
+    arrow
+  />
+</Cards>
+
+---
+
+*Was this article helpful? [Let us know]({{FEEDBACK_URL}}).*

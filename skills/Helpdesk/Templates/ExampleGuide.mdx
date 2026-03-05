@@ -1,0 +1,80 @@
+---
+title: "How to Send an Invoice by Email"
+description: "Learn how to send PDF invoices to your customers via email directly from your Shopify admin."
+---
+
+import { Steps, Callout, Cards } from 'nextra/components'
+
+# How to Send an Invoice by Email
+
+Send professional PDF invoices to your customers automatically or manually from your Shopify order page.
+
+<Callout type="info">
+  **Prerequisites:** You need at least one order in your Shopify store and an email template configured in **Settings → Email Templates**.
+</Callout>
+
+## Overview
+
+PDF Invoice lets you email invoices directly from the order detail page. You can send to individual orders or use bulk actions for multiple orders at once.
+
+## Steps
+
+<Steps>
+
+### Open the order in Shopify Admin
+
+Navigate to **Orders** in your Shopify admin panel and click on the order you want to send an invoice for.
+
+{/* screenshot: Shopify admin orders list with an order highlighted | page: /admin/orders | element: .order-list-item */}
+![Shopify admin orders list](/images/send-invoice-email/step-1.png)
+
+### Click "More actions" and select "Print/Send Invoice"
+
+In the order detail page, click the **More actions** dropdown button and select **Print/Send Invoice by SUSPENDED PDF Invoice**.
+
+{/* screenshot: More actions dropdown showing Print/Send Invoice option | page: /admin/orders/12345 | element: .more-actions-dropdown */}
+![More actions dropdown with invoice option](/images/send-invoice-email/step-2.png)
+
+### Choose "Send Email" and select your template
+
+In the invoice dialog, select **Send Email** as the delivery method. Choose your preferred email template from the dropdown.
+
+{/* screenshot: Invoice dialog with Send Email selected and template dropdown | page: /admin/orders/12345 | element: .invoice-dialog */}
+![Invoice dialog with email option](/images/send-invoice-email/step-3.png)
+
+### Review and send
+
+Preview the email content, verify the recipient email address, and click **Send**. You'll see a confirmation once the email is delivered.
+
+{/* screenshot: Email preview with Send button highlighted | page: /admin/orders/12345 | element: .email-preview */}
+![Email preview before sending](/images/send-invoice-email/step-4.png)
+
+</Steps>
+
+<Callout type="warning">
+  Make sure your store email address is verified in **Settings → Store Details** to avoid emails landing in spam folders.
+</Callout>
+
+## What's Next
+
+<Cards>
+  <Cards.Card
+    title="Set Up Email Automation"
+    href="/docs/automation/email-automation"
+    arrow
+  />
+  <Cards.Card
+    title="Customize Email Templates"
+    href="/docs/templates/email-templates"
+    arrow
+  />
+  <Cards.Card
+    title="Bulk Send Invoices"
+    href="/docs/orders/bulk-send"
+    arrow
+  />
+</Cards>
+
+---
+
+*Was this article helpful? [Let us know]({{FEEDBACK_URL}}).*

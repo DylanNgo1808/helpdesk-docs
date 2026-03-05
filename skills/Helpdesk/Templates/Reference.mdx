@@ -1,0 +1,79 @@
+---
+title: "{{TITLE}}"
+description: "{{DESCRIPTION}}"
+---
+
+import { Callout, Cards, Tabs } from 'nextra/components'
+
+# {{TITLE}}
+
+{{INTRO_PARAGRAPH}}
+
+## Overview
+
+{{OVERVIEW_PARAGRAPH}}
+
+## {{SECTION_1_TITLE}}
+
+{{SECTION_1_DESCRIPTION}}
+
+| {{COL_1_HEADER}} | {{COL_2_HEADER}} | {{COL_3_HEADER}} |
+|---|---|---|
+| {{ROW_1_COL_1}} | {{ROW_1_COL_2}} | {{ROW_1_COL_3}} |
+| {{ROW_2_COL_1}} | {{ROW_2_COL_2}} | {{ROW_2_COL_3}} |
+| {{ROW_3_COL_1}} | {{ROW_3_COL_2}} | {{ROW_3_COL_3}} |
+
+<Callout type="info">
+  {{SECTION_1_NOTE}}
+</Callout>
+
+## {{SECTION_2_TITLE}}
+
+{{SECTION_2_DESCRIPTION}}
+
+<Tabs items={['{{TAB_1_LABEL}}', '{{TAB_2_LABEL}}']}>
+  <Tabs.Tab>
+    {{TAB_1_CONTENT}}
+
+    ```{{CODE_LANGUAGE}}
+    {{TAB_1_CODE_EXAMPLE}}
+    ```
+  </Tabs.Tab>
+  <Tabs.Tab>
+    {{TAB_2_CONTENT}}
+
+    ```{{CODE_LANGUAGE}}
+    {{TAB_2_CODE_EXAMPLE}}
+    ```
+  </Tabs.Tab>
+</Tabs>
+
+## {{SECTION_3_TITLE}}
+
+{{SECTION_3_DESCRIPTION}}
+
+{/* screenshot: {{SECTION_3_SCREENSHOT_DESCRIPTION}} | page: {{APP_PAGE_PATH}} | element: {{CSS_SELECTOR}} */}
+![{{SECTION_3_SCREENSHOT_ALT}}](/images/{{ARTICLE_SLUG}}/reference-1.png)
+
+<Callout type="important">
+  {{IMPORTANT_NOTE}}
+</Callout>
+
+## Related
+
+<Cards>
+  <Cards.Card
+    title="{{RELATED_1_TITLE}}"
+    href="{{RELATED_1_HREF}}"
+    arrow
+  />
+  <Cards.Card
+    title="{{RELATED_2_TITLE}}"
+    href="{{RELATED_2_HREF}}"
+    arrow
+  />
+</Cards>
+
+---
+
+*Was this article helpful? [Let us know]({{FEEDBACK_URL}}).*
